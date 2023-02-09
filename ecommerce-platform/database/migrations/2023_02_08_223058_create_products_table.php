@@ -19,8 +19,9 @@ return new class extends Migration
             $table->tinyText('description');
             $table->string('size');
             $table->double('price');
-            $table->Integer('inventory_id');
-            $table->Integer('category_id');
+            $table->binary('image');
+            $table->foreignId('inventory_id');
+            $table->foreignId('category_id');
         });
     }
 
