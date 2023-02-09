@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('inventories', function (Blueprint $table) {
-            $table->increment('id');
+            $table->increments('id');
             $table->Integer('quantity');
             $table->Integer('delivery');
         });
