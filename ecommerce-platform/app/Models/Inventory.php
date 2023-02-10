@@ -13,6 +13,6 @@ class Inventory extends Model
 
         "quantity",
         "delivery_id"
-        
+
     ];
 }
