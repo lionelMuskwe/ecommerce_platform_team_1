@@ -10,7 +10,7 @@ class Delivery extends Model
     use HasFactory;
 
         protected $fillable = [
-        
+
             "company_id"
 
         ];
