@@ -43,5 +43,8 @@ Route::get("/multiple-products",[ProductController::class, "product"])->name("mu
 //SignUp Route
 Route::get("/signup", [UserController::class, "sign"])->name("signup");
 
+//Login Route
+Route::get("/login", [UserController::class, "log"])->name("login");
+
 
 
