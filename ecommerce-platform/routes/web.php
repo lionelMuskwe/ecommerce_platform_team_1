@@ -30,6 +30,11 @@ Route::get('/pages', function () {
 Route::get("/home",[HomeController::class, "home"])->name("home");
 Route::get("",[HomeController::class, "home"]); // if they enter domain name only
 
+//Admin Homepage Route
+Route::get("homepage", [HomeController::class], "adminhome")->name("homepage");
+
+//Employee Homepage Route
+Route::get("/employee-home", [HomeController::class], "employeehome")->name("employee-home");
 
 // About-us Route
 Route::get("/about-us",[HomeController::class, "about"])->name("about-us");
@@ -39,6 +44,9 @@ Route::get("/contact-us",[HomeController::class, "contact"])->name("contact-us")
 
 //Product Route
 Route::get("/multiple-products",[ProductController::class, "product"])->name("multiple-products");
+
+//Detailed Product Route
+Route::get("/detailed-product", [ProductController::class], "detailedProduct")->name("detailed-product");
 
 //SignUp Route
 Route::get("/signup", [UserController::class, "sign"])->name("signup");
