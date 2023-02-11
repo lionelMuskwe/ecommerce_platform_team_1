@@ -26,7 +26,7 @@
             <a href="{{route('contact-us')}}">Contact Us</a>
             <a href="basket">Basket</a></li>
             <a href="{{route('signup')}}">Signup</a></li>
-            <a href="login">Login</a></li>
+            <a href="{{route('login')}}">Login</a></li>
           </li>
         </ul>
         <form class="d-flex">
