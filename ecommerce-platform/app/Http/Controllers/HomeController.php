@@ -11,4 +11,12 @@ class HomeController extends Controller
     public function home(Request $request){
         return view("customers/homepage");
     }
+
+    public function about(Request $request){
+        return view("customers/about-us");
+    }
+
+    public function contact(Request $request){
+        return view("customers/contact-us");
+    }
 }
