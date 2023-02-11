@@ -1,4 +1,13 @@
-<!-- Footer -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+</head>
+<body>
+  <!-- Footer -->
 <footer class="text-center text-lg-start bg-light text-muted" style="margin-top: auto;">
   <!-- Section: Social media -->
   <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
@@ -120,3 +129,5 @@
   <!-- Copyright -->
 </footer>
 <!-- Footer -->
+</body>
+</html>

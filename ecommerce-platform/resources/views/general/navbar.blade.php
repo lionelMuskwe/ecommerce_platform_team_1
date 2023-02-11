@@ -6,6 +6,7 @@
       width: 150px;
     }
   </style>
+  <link rel="stylesheet" href="{{asset('css/navbar.css')}}">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
