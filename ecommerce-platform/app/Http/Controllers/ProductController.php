@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function products(Request $request){
-        return view('customers/productspage');
+    public function index(){
+        return view('products/index');
     }
 }
