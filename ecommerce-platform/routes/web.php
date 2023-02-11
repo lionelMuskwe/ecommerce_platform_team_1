@@ -40,5 +40,8 @@ Route::get("/contact-us",[HomeController::class, "contact"])->name("contact-us")
 //Product Route
 Route::get("/multiple-products",[ProductController::class, "product"])->name("multiple-products");
 
+//SignUp Route
+Route::get("/signup", [UserController::class, "sign"])->name("signup");
+
 
 
