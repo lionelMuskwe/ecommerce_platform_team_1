@@ -37,5 +37,8 @@ Route::get("/about-us",[HomeController::class, "about"])->name("about-us");
 // Contact-us Route
 Route::get("/contact-us",[HomeController::class, "contact"])->name("contact-us");
 
-//Products Route
-Route::get("/products", [HomeController::class], "products")->name("productspage");
+//Product Route
+Route::get("/multiple-products",[ProductController::class, "product"])->name("multiple-products");
+
+
+
