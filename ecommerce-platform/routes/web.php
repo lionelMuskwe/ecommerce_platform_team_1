@@ -14,10 +14,12 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-/*Route::get('/', function () {
-    return view('welcome');
+// This function is being used for testing and displaying
+// the page that has links to all other pages
+Route::get('/pages', function () {
+    return view('general/pages');
 });
-*/
+
 
 // Please note we are going to let the HomeController handle
 // the homepage, about-us and contact-us pages as the would
@@ -27,6 +29,7 @@ use App\Http\Controllers\HomeController;
 // Homepage Route
 Route::get("/home",[HomeController::class, "home"])->name("home");
 Route::get("",[HomeController::class, "home"]); // if they enter domain name only
+
 
 // About-us Route
 Route::get("/about-us",[HomeController::class, "about"])->name("about-us");
