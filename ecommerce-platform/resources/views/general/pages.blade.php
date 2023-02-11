@@ -25,7 +25,7 @@
             <a href="{{url('home')}}">Customer Homepage</a>
         </ul>
         <ul>
-            <a href="{{url('admins/homepage')}}">Admin Homepage</a>
+            <a href="{{url('admin-home')}}">Admin Homepage</a>
         </ul>
         <ul>
             <a href="{{url('employee-home')}}">Employee Homepage</a>
