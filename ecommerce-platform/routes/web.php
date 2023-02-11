@@ -38,4 +38,4 @@ Route::get("/about-us",[HomeController::class, "about"])->name("about-us");
 Route::get("/contact-us",[HomeController::class, "contact"])->name("contact-us");
 
 //Products Route
-Route::get("/products", [HomeController::class], "products")->name("productspage")
+Route::get("/products", [HomeController::class], "products")->name("productspage");
