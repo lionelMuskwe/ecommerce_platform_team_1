@@ -25,12 +25,29 @@
             <a href="{{url('home')}}">Customer Homepage</a>
         </ul>
         <ul>
+            <a href="{{url('admin-home')}}">Admin Homepage</a>
+        </ul>
+        <ul>
+            <a href="{{url('employee-home')}}">Employee Homepage</a>
+        </ul>
+        <ul>
             <a href="{{url('about-us')}}"> About Us</a>
         </ul>
         <ul>
             <a href="{{url('contact-us')}}">Contact US</a>
         </ul>
-
+        <ul>
+            <a href="{{url('multiple-products')}}">Product page</a>
+        </ul>
+        <ul>
+            <a href="{{url('detailed-product')}}">Detailed Product page</a>
+        </ul>
+        <ul>
+            <a href="{{url('signup')}}">SignUp</a>
+        </ul>
+        <ul>
+            <a href="{{url('login')}}">LogIn</a>
+        </ul>
     </li>
 
 @endsection()
