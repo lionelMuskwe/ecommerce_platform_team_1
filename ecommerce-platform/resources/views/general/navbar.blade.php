@@ -25,7 +25,7 @@
             <a href="{{route('about-us')}}">About Us</a>
             <a href="{{route('contact-us')}}">Contact Us</a>
             <a href="basket">Basket</a></li>
-            <a href="register">Signup</a></li>
+            <a href="{{route('signup')}}">Signup</a></li>
             <a href="login">Login</a></li>
           </li>
         </ul>
