@@ -88,3 +88,53 @@ main {
     text-decoration: none;
     border-radius: 5px;
 }
+
+#Meat {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    margin-top: 10px;
+    width: 40%;
+    margin: 5px auto;
+}
+
+#Bread {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    margin-top: 10px;
+    width: 40%;
+    margin: 5px auto;
+}
+
+#Cheese {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    margin-top: 10px;
+    width: 40%;
+    margin: 5px auto;
+}
+
+#Snails {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    margin-top: 10px;
+    width: 40%;
+    margin: 5px auto;
+}
+
+#Fish {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    margin-top: 10px;
+    width: 40%;
+    margin: 5px auto;
+}
