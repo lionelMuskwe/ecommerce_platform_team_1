@@ -20,9 +20,9 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-            <a href="{{route("home")}}">Home</a>
-            <a href="{{route("productspage")}}">Products</a>
-            <a href="about">About Us</a>
+            <a href="{{route('home')}}">Home</a>
+            <a href="{{route('productspage')}}">Products</a>
+            <a href="{{route('about')}}">About Us</a>
             <a href="contact">Contact Us</a>
             <a href="basket">Basket</a></li>
             <a href="register">Signup</a></li>
