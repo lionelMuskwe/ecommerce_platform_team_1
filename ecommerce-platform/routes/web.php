@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,7 +32,7 @@ Route::get("/home",[HomeController::class, "home"])->name("home");
 Route::get("",[HomeController::class, "home"]); // if they enter domain name only
 
 //Admin Homepage Route
-Route::get("/admin-home", [HomeController::class], "adminhome")->name("adminshome");
+Route::get("/admin-home", [HomeController::class], "adminhome")->name("admin-home");
 
 //Employee Homepage Route
 Route::get("/employee-home", [HomeController::class], "employeehome")->name("employee-home");
@@ -46,13 +47,12 @@ Route::get("/contact-us",[HomeController::class, "contact"])->name("contact-us")
 Route::get("/multiple-products",[ProductController::class, "product"])->name("multiple-products");
 
 //Detailed Product Route
-Route::get("/detailed-product", [ProductController::class], "detailedProduct")->name("detailed-product");
+Route::get("/detailed-product", [ProductController::class, "detailedProduct"])->name("detailed-product");
 
 //SignUp Route
 Route::get("/signup", [UserController::class, "sign"])->name("signup");
 
 //Login Route
 Route::get("/login", [UserController::class, "log"])->name("login");
-
 
 
