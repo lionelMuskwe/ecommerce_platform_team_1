@@ -9,10 +9,15 @@
 @endsection
 
 @section("content")
-    {{-- Content goes in this section --}}
-    <h1>You content should go in this section</h1>
-    <br>
-    <p>Remember to always write clean code</p>
+
+    <div class="mission-statement">
+        Our company is about doing etc. Readers Republic is one of the only
+    stores that sells books in etc
+    </div>
+
+    <p>We hope that we can help you in finding the write books etc</p>
+
+
 
 @endsection()
 
