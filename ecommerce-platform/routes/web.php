@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Models\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -54,5 +55,15 @@ Route::get("/signup", [UserController::class, "sign"])->name("signup");
 
 //Login Route
 Route::get("/login", [UserController::class, "log"])->name("login");
+
+//Users Post request
+Route::post('/signup', function(){
+ $user = new User();
+ $user->firstname = request('firstname');
+ $user->lastname = request('lastname');
+ $user->save();
+
+ return redirect('/signup');
+});
 
 
