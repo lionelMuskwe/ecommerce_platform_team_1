@@ -14,5 +14,14 @@
     <br>
     <p>Remember to always write clean code</p>
 
+    <form action="/signup" method="POST">
+        @csrf
+        <label for="firstname">First Name</label>
+        <input type="text" name="firstname"></br>
+        <label for="lastname">Last Name</label>
+        <input type="text" name="lastname"></br>
+        <button>Send</button>
+    </form>
+
 @endsection()
 
