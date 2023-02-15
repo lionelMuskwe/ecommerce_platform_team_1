@@ -1,0 +1,25 @@
+h1 {
+    text-align: center;
+    color: blueviolet;
+}
+
+form{
+    text-align: center;
+}
+
+form label{
+    display: inline-block;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+
+}
+
+form button{
+    padding: 5px;;
+}
+
+.bottom_section p{
+    color: blue;
+    padding-left: 10px;
+}
