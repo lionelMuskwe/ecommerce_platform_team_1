@@ -20,6 +20,16 @@
         <input type="text" name="firstname"></br>
         <label for="lastname">Last Name</label>
         <input type="text" name="lastname"></br>
+        <label for="password">Password</label>
+        <input type="text" name="password"></br>
+        <label for="age">Age</label>
+        <input type="text" name="age"></br>
+        <label for="address">Address</label>
+        <input type="text" name="address"></br>
+        <label for="telephone">Telephone</label>
+        <input type="text" name="telephone"></br>
+        <label for="role">Role</label>
+        <input type="text" name="role"></br>
         <button>Send</button>
     </form>
 
