@@ -17,6 +17,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('firstname');
             $table->string('lastname');
+            $table->string('password');
             $table->Integer('age');
             $table->tinyText('address');
             $table->string('telephone');
