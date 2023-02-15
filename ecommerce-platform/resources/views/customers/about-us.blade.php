@@ -9,6 +9,7 @@
 @endsection
 
 @section("content")
+<h1> ABOUT US </h1>
 
     <div class="mission-statement">
     We are a passionate team of bibliophiles who have come together to create a haven for book lovers. Our mission is to promote the joy of reading and to make books accessible to everyone. We believe that books have the power to inspire, educate, and entertain, and we are dedicated to providing a diverse range of books to suit every taste and interest.
