@@ -21,7 +21,4 @@ We are committed to providing excellent customer service, and our knowledgeable 
 
     <p>We hope that we can help you in finding the write books etc</p>
 
-
-
-@endsection()
-
+@endsection

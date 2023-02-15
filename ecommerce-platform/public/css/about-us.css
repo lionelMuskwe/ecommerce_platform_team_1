@@ -1,11 +1,16 @@
 .mission-statement {
-    background-color: azure;
-    padding: 15px;
+    background-color: white;
+    padding: 30px;
     font-size: 25px;
-    box-shadow: 3px 3px grey;
-}
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 3px solid rebeccapurple;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 800px;
+  }
 
-h1 {
+  h1{
     color: rebeccapurple;
-    font-style: italic;
-}
+    font-style: bold;
+    text-align: left;
+  }
