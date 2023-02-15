@@ -28,7 +28,7 @@
     </form>
 
     <div class="bottom_section">
-        <p> Already have an account with us? Log in now! </p>
+        <a href="{{route('login')}}">Already have an account with us? Log in now! </a>
     </div>
 @endsection()
 
