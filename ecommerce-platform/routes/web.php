@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Models\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -32,7 +33,7 @@ Route::get("/home",[HomeController::class, "home"])->name("home");
 Route::get("",[HomeController::class, "home"]); // if they enter domain name only
 
 //Admin Homepage Route
-Route::get("/admin-home", [HomeController::class], "adminhome")->name("adminshome");
+Route::get("/admin-home", [HomeController::class], "adminhome")->name("admin-home");
 
 //Employee Homepage Route
 Route::get("/employee-home", [HomeController::class], "employeehome")->name("employee-home");
@@ -55,5 +56,14 @@ Route::get("/signup", [UserController::class, "sign"])->name("signup");
 //Login Route
 Route::get("/login", [UserController::class, "log"])->name("login");
 
+//Users Post request
+Route::post('/signup', function(){
+ $user = new User();
+ $user->firstname = request('firstname');
+ $user->lastname = request('lastname');
+ $user->save();
+
+ return redirect('/signup');
+});
 
 
