@@ -68,7 +68,7 @@ Route::post('/signup', function(){
  $user->role = request('role');
  $user->save();
 
- return redirect('/signup');
+ return redirect('/login');
 });
 
 
