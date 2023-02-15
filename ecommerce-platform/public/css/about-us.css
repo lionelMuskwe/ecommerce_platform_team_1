@@ -4,3 +4,8 @@
     font-size: 25px;
     box-shadow: 3px 3px grey;
 }
+
+h1 {
+    color: rebeccapurple;
+    font-style: italic;
+}
