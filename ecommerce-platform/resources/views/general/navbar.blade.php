@@ -24,7 +24,7 @@
             <a href="{{route('multiple-products')}}">Products</a>
             <a href="{{route('about-us')}}">About Us</a>
             <a href="{{route('contact-us')}}">Contact Us</a>
-            <a href="basket">Basket</a></li>
+            <a href="{{route('basket')}}">Basket</a>
             <a href="{{route('signup')}}">Signup</a></li>
             <a href="{{route('login')}}">Login</a></li>
           </li>
