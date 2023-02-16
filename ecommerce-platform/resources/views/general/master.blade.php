@@ -17,7 +17,11 @@
 
 </head>
 <body style="min-height: 100vh; display:flex; flex-direction:column">
-    @include("general/navbar")
+
+@include('general/navbar')
+    <div class="container">
+      @yield('content')
+    </div>
 
     @yield("content")
 
