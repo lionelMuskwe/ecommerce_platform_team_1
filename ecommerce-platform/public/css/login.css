@@ -1,31 +1,8 @@
-h1 {
-    text-align: center;
-    color: blueviolet;
+.wrapper {
+    border-top: 03px solid purple;
 }
 
-form{
-    text-align: center;
-}
-
-form label{
-    display: inline-block;
-    width: 200px;
-    text-align: center;
-    padding: 10px;
-
-}
-
-form button{
-    padding: 5px;;
-}
-
-form p{
-    text-align: right;
-    display: inline-block;
-    color: blue;
-}
-
-.bottom_section a{
-    color: blue;
-    padding-left: 10px;
+.wrapper a {
+    text-decoration: none;
+    color: purple;
 }
