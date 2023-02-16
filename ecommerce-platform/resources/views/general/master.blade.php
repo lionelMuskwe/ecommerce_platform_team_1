@@ -23,7 +23,6 @@
       @yield('content')
     </div>
 
-    @yield("content")
 
     @include("general/footer")
 </body>
