@@ -14,5 +14,15 @@
     <br>
     <p>Remember to always write clean code</p>
 
+
+    <form action="/login" Method="POST">
+        @csrf
+        <label for = "firstname">First Name</label>
+        <input type="text" name="firstname"></br>
+        <label for = "password">Password</label>
+        <input type="text" name="password"></br>
+        <button>Login</button>
+    </form>
+
 @endsection()
 
