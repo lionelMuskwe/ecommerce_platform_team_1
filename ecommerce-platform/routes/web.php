@@ -72,3 +72,6 @@ Route::post('/signup', function(){
  return redirect('/login');
 });
 
+//Testing login function
+Route::post('/login', [UserController::class, 'loginRequest']);
+
