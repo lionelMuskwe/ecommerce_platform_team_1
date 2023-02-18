@@ -59,6 +59,7 @@ Route::get("/login", [UserController::class, "log"])->name("login");
 //Users Post request
 Route::post('/signup', function(){
  $user = new User();
+ $user->username = request('username');
  $user->firstname = request('firstname');
  $user->lastname = request('lastname');
  $user->password = request('password');
