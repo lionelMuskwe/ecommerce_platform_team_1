@@ -65,7 +65,7 @@ About Us
                                     <li>Excellent customer reviews</li>
                                     <li>Innovative digital experiences</li>
                                     <li>Award for most innovative new business</li>
-</ul>
+                                </ul>
                                 </p>
                             </div>
                         </div>
