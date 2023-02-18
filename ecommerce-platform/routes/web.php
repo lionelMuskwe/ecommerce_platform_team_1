@@ -72,4 +72,3 @@ Route::post('/signup', function(){
  return redirect('/login');
 });
 
-
