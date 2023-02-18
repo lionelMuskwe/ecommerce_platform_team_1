@@ -17,7 +17,7 @@
 
     <form action="/login" Method="POST">
         @csrf
-        <label for = "username">First Name</label>
+        <label for = "username">Username</label>
         <input type="text" name="username"></br>
         <label for = "password">Password</label>
         <input type="text" name="password"></br>
