@@ -16,6 +16,8 @@
 
     <form action="/signup" method="POST">
         @csrf
+        <label for="username">User-name</label>
+        <input type="text" name="username"></br>
         <label for="firstname">First Name</label>
         <input type="text" name="firstname"></br>
         <label for="lastname">Last Name</label>
