@@ -15,11 +15,14 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->tinyText('description');
-            $table->string('size');
+            $table->string('ISBN');
+            $table->string('title');
+            $table->string('author');
+            $table->string('description');
             $table->double('price');
-            $table->binary('image');
+            $table->string('image');
+            $table->Date('date_published');
+            $table->string('publisher');
             $table->foreignId('inventory_id');
             $table->foreignId('category_id');
         });
