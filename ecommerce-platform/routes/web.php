@@ -77,4 +77,3 @@ Route::post('/login', [UserController::class, 'loginRequest']);
 
 //Route for showing the list of users
 Route::get('userspage', [UserController::class, 'show']);
-
