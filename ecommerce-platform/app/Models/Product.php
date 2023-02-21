@@ -13,7 +13,7 @@ class Product extends Model
 
         "ISBN",
         "title",
-        "author"
+        "author",
         "description",
         "price",
         "image",
