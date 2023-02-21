@@ -15,4 +15,9 @@ class ProductController extends Controller
     public function detailedProduct(Request $request){
         return view("customers/detailed-product");
     }
+
+    public function detail($id){
+        $data = Product::find($id);
+        return view('customers/detailed-product', ['products'=>$data]);
+    }
 }
