@@ -34,10 +34,15 @@ Route::get("/home",[HomeController::class, "home"])->name("home");
 Route::get("",[HomeController::class, "home"]); // if they enter domain name only
 
 //Admin Homepage Route
-Route::get("/admin-home", [HomeController::class], "adminhome")->name("admin-home");
+Route::get("/admin-home", [HomeController::class, "adminhome"])->name("admin-home");
+
+//Admin Add-Employee route
+Route::get("/admin-add-employee", [HomeController::class, "adminAddEmployeePage"])->name("admin-add-employee");
+
+Route::post("/admin-add-employee", [HomeController::class, "adminAddEmployee"])->name("admin-add-employee-submit");
 
 //Employee Homepage Route
-Route::get("/employee-home", [HomeController::class], "employeehome")->name("employee-home");
+Route::get("/employee-home", [HomeController::class, "employeehome"])->name("employee-home");
 
 // About-us Route
 Route::get("/about-us",[HomeController::class, "about"])->name("about-us");
