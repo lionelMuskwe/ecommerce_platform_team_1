@@ -13,4 +13,19 @@ class UserController extends Controller
     public function log(Request $request){
         return view("general/login");
     }
+
+    public function loginRequest(Request $req){
+        $username = $req->input('username');
+        $password = $req->input('password');
+
+        $checkLogin = \DB::table('users')->where(['username'=>$username, 'password'=>$password])->get();
+        if(count($checkLogin) >0)
+        {
+            echo "Login Successfull";
+        }
+        else
+        {
+            echo "Login Failed!";
+        }
+    }
 }
