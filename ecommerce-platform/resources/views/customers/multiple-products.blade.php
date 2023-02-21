@@ -11,19 +11,7 @@
 @section("content")
 
     <h1> Products </h1>
-
-    <table border="5">
-        <tr>
-            <td>Image</td>
-            <td>Title</td>
-            <td>Author</td>
-        </tr>
         @foreach ($products as $product)
-        <tr>
-            <td>{{$product['images']}}</td>
-            <td>{{$product['title']}}</td>
-            <td>{{$product['author']}}</td>
-        </tr>
+            <a href="{{ route('product.detail', ['id' => $product['id']]) }}">{{$product['title']}}</a>
         @endforeach
-    </table>
 @endsection()
