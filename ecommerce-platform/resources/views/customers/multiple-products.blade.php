@@ -9,9 +9,21 @@
 @endsection
 
 @section("content")
-    {{-- Content goes in this section --}}
-    <h1>You content should go in this section</h1>
-    <br>
-    <p>Remember to always write clean code</p>
 
+    <h1> Products </h1>
+
+    <table border="5">
+        <tr>
+            <td>Image</td>
+            <td>Title</td>
+            <td>Author</td>
+        </tr>
+        @foreach ($products as $product)
+        <tr>
+            <td>{{$product['images']}}</td>
+            <td>{{$product['title']}}</td>
+            <td>{{$product['author']}}</td>
+        </tr>
+        @endforeach
+    </table>
 @endsection()
