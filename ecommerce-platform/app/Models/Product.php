@@ -11,11 +11,14 @@ class Product extends Model
 
     protected $fillable = [
 
-        "name",
+        "ISBN",
+        "title",
+        "author"
         "description",
-        "size",
         "price",
         "image",
+        "date_published",
+        "publisher",
         "inventory_id",
         "category_id"
     ];
