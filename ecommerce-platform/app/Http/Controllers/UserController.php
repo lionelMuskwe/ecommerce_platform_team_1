@@ -16,7 +16,25 @@ class UserController extends Controller
     }
 
     public function loginRequest(Request $req){
+
+        $data = $req->input();
+        $req->session()->put('username', $data['username']);
         $username = $req->input('username');
+        $password = $req->input('password');
+
+
+        $checkLogin = \DB::table('users')->where(['username'=>$username, 'password'=>$password])->get();
+        if(count($checkLogin) >0)
+        {
+            return redirect('home');
+        }
+        else
+        {
+            echo "Login Failed!";
+        }
+
+
+        /*$username = $req->input('username');
         $password = $req->input('password');
 
         $checkLogin = \DB::table('users')->where(['username'=>$username, 'password'=>$password])->get();
@@ -27,7 +45,7 @@ class UserController extends Controller
         else
         {
             echo "Login Failed!";
-        }
+        }*/
     }
 
     public function show(){

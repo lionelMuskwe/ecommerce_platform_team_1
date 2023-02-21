@@ -88,3 +88,4 @@ Route::post('/login', [UserController::class, 'loginRequest']);
 //Route for showing the list of users
 Route::get('userspage', [UserController::class, 'show']);
 
+Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.detail');
