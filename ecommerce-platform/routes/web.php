@@ -85,3 +85,6 @@ Route::post('/signup', function(){
 //Testing login function
 Route::post('/login', [UserController::class, 'loginRequest']);
 
+//Route for showing the list of users
+Route::get('userspage', [UserController::class, 'show']);
+
