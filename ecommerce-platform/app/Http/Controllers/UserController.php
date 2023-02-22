@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UserController extends Controller
 {
@@ -12,5 +13,43 @@ class UserController extends Controller
 
     public function log(Request $request){
         return view("general/login");
+    }
+
+    public function loginRequest(Request $req){
+
+        $data = $req->input();
+        $req->session()->put('username', $data['username']);
+        $username = $req->input('username');
+        $password = $req->input('password');
+
+
+        $checkLogin = \DB::table('users')->where(['username'=>$username, 'password'=>$password])->get();
+        if(count($checkLogin) >0)
+        {
+            return redirect('home');
+        }
+        else
+        {
+            echo "Login Failed!";
+        }
+
+
+        /*$username = $req->input('username');
+        $password = $req->input('password');
+
+        $checkLogin = \DB::table('users')->where(['username'=>$username, 'password'=>$password])->get();
+        if(count($checkLogin) >0)
+        {
+            echo "Login Successfull";
+        }
+        else
+        {
+            echo "Login Failed!";
+        }*/
+    }
+
+    public function show(){
+        $data= User::all();
+        return view('admins/userspage', ['users'=>$data]);
     }
 }

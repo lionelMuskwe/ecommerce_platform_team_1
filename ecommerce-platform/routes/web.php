@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CartController;
 use App\Models\User;
 /*
 |--------------------------------------------------------------------------
@@ -42,10 +43,15 @@ Route::get("/home",[HomeController::class, "home"])->name("home");
 Route::get("",[HomeController::class, "home"]); // if they enter domain name only
 
 //Admin Homepage Route
-Route::get("/admin-home", [HomeController::class], "adminhome")->name("admin-home");
+Route::get("/admin-home", [HomeController::class, "adminhome"])->name("admin-home");
+
+//Admin Add-Employee route
+Route::get("/admin-add-employee", [HomeController::class, "adminAddEmployeePage"])->name("admin-add-employee");
+
+Route::post("/admin-add-employee", [HomeController::class, "adminAddEmployee"])->name("admin-add-employee-submit");
 
 //Employee Homepage Route
-Route::get("/employee-home", [HomeController::class], "employeehome")->name("employee-home");
+Route::get("/employee-home", [HomeController::class, "employeehome"])->name("employee-home");
 
 // About-us Route
 Route::get("/about-us",[HomeController::class, "about"])->name("about-us");
@@ -55,6 +61,10 @@ Route::get("/contact-us",[HomeController::class, "contact"])->name("contact-us")
 
 //Product Route
 Route::get("/multiple-products",[ProductController::class, "product"])->name("multiple-products");
+
+//Product added to cart Route
+Route::post('/add-to-cart/{id}', [CartController::class, 'addToCart'])->middleware('auth');
+
 
 //Detailed Product Route
 Route::get("/detailed-product", [ProductController::class, "detailedProduct"])->name("detailed-product");
@@ -68,16 +78,33 @@ Route::get("/login", [UserController::class, "log"])->name("login");
 //Users Post request
 Route::post('/signup', function(){
  $user = new User();
+ $user->username = request('username');
  $user->firstname = request('firstname');
  $user->lastname = request('lastname');
  $user->password = request('password');
  $user->age = request('age');
  $user->address = request('address');
  $user->telephone = request('telephone');
- $user->role = request('role');
+ $user->role = 0;
  $user->save();
 
  return redirect('/login');
 });
 
+//Testing login function
+Route::post('/login', [UserController::class, 'loginRequest']);
 
+//Route for showing the list of users
+Route::get('userspage', [UserController::class, 'show']);
+
+Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.detail');
+
+
+
+// Route::get('/authenticated', function () {
+//     if (Auth::check()) {
+//         return 'You are authenticated.';
+//     } else {
+//         return 'You are not authenticated.';
+//     }
+// })->middleware('auth');
