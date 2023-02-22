@@ -54,7 +54,7 @@ Route::get("/contact-us",[HomeController::class, "contact"])->name("contact-us")
 Route::get("/multiple-products",[ProductController::class, "product"])->name("multiple-products");
 
 //Product added to cart Route
-Route::post('/addToCart/{id}', [CartController::class, 'addToCart']);
+Route::post('/add-to-cart/{id}', [CartController::class, 'addToCart'])->middleware('auth');
 
 
 //Detailed Product Route
@@ -89,3 +89,13 @@ Route::post('/login', [UserController::class, 'loginRequest']);
 Route::get('userspage', [UserController::class, 'show']);
 
 Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.detail');
+
+
+
+// Route::get('/authenticated', function () {
+//     if (Auth::check()) {
+//         return 'You are authenticated.';
+//     } else {
+//         return 'You are not authenticated.';
+//     }
+// })->middleware('auth');

@@ -10,21 +10,22 @@ use App\Models\Cart;
 class CartController extends Controller
 {
     function addToCart (Request $request, $id){
-        if (Auth::id()){
-            $user = Auth::user();
+        if (Auth::login($user)) {
             $product = product::find($id);
             $cart = new cart;
-
+        
             $cart->product_id=$product->id;
-            //$cart->user_id = $user->id;
+            $cart->user_id = $user->id;
             //cart->quantity = $request->quantity;
             //$cart->price = $product->price;
             $cart->save();
-
+        
             return redirect()->back()->with('status', 'Product added to Cart!');
         } else {
-            return redirect('login');
+            echo("user not authenticated");
+            //return redirect('login');
         }
+        
 
     }
 }
