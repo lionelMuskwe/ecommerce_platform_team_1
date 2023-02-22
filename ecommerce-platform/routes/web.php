@@ -99,6 +99,10 @@ Route::get('userspage', [UserController::class, 'show']);
 
 Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.detail');
 
+Route::get('/user-basket', function () {
+    return view('general/user-basket');
+});
+
 
 
 // Route::get('/authenticated', function () {
