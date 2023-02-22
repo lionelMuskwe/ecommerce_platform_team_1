@@ -29,7 +29,7 @@
         <a class="nav-link" href="{{ url('/contact-us') }}">Contact Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ url('/basket') }}">Basket</a>
+        <a class="nav-link" href="{{ url('/user-basket') }}">Basket</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ url('/signup') }}">Sign Up</a>
