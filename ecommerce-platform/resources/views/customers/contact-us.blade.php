@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="text-center text-md-left"><br><br>
-                            <button class="btn btn-primary" type="submit">Contact Us!</button>
+                            <button class="btn btn-primary" type="submit" style="background:purple" >Contact Us!</button>
                         </div>
 
                     </form>
