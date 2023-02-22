@@ -18,21 +18,21 @@ Login
                 <h2 class="text-center pt-3 mb-3">Login Now</h2>
 
                 <!-- Form start -->
-                <form action="#">
-
+                <form action="/login" method="POST">
+                @csrf
 
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-                        <input type="text" class="form-control" placeholder="Email" />
+                        <input type="text" name="username" class="form-control" placeholder="Username" />
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-lock"></i></span>
-                        <input type="text" class="form-control" placeholder="Password" />
+                        <input type="text" name="password" class="form-control" placeholder="Password" />
                     </div>
 
                     <div class="d-grid">
                         <button type="button" class="btn btn-success" style="background:purple;">Login Now</button>
-
+                </form>
                         <p class="text-center">
                             Not registered with us? <a href="{{route('signup')}}"> Register Here </a>
                         </p>
