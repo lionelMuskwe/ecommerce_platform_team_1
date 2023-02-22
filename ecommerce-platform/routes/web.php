@@ -29,6 +29,15 @@ Route::get('/pages', function () {
 // be no need to create a controller for each of them as they
 // are static pages
 
+//this creates a new route that maps to the 'show' method in the 'EmployeeProfileController'
+Route::get('/employee/{id}', 'EmployeeProfileController@show')->name('employee.show');
+Route::get('/employees/{id}', [EmployeeProfileController::class, 'show']);
+
+
+// Employee view all all customer profile 
+Route::get('/customers/{id}', 'CustomerController@show')->name('customers.show');
+Route::get('/customer-profiles', 'CustomerProfileController@index');
+
 // Homepage Route
 Route::get("/home",[HomeController::class, "home"])->name("home");
 Route::get("",[HomeController::class, "home"]); // if they enter domain name only
