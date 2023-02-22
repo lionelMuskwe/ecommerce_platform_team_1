@@ -70,9 +70,14 @@ Route::post('/signup', function(){
  $user = new User();
  $user->firstname = request('firstname');
  $user->lastname = request('lastname');
+ $user->password = request('password');
+ $user->age = request('age');
+ $user->address = request('address');
+ $user->telephone = request('telephone');
+ $user->role = request('role');
  $user->save();
 
- return redirect('/signup');
+ return redirect('/login');
 });
 
 
