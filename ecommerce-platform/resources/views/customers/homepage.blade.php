@@ -18,8 +18,6 @@
 	</header>
 	<main>
 		<section>
-            <br>
-            <br>
 			<h2>Products</h2>
 			<p>insert carousel of products here</p>
             <br>
