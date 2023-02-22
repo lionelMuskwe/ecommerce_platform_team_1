@@ -54,3 +54,5 @@ SIGN UP
     </div>
     </form>
 </body>
+
+@endsection()
