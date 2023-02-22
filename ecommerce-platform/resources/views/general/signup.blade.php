@@ -30,8 +30,6 @@
         <input type="text" name="address"></br>
         <label for="telephone">Telephone</label>
         <input type="text" name="telephone"></br>
-        <label for="role">Role</label>
-        <input type="text" name="role"></br>
         <button>Send</button>
     </form>
 
