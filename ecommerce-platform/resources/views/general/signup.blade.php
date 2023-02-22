@@ -18,29 +18,39 @@ SIGN UP
                 <h2 class="text-center pt-3">Signup Now</h2>
                 <p class="text-center text-muted lead mb-3">It's free and takes a minute</p>
                 <!-- Form start -->
-                <form action="#">
+                <form action="/signup" method="POST">
+                @csrf
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-user"></i></span>
-                        <input type="text" class="form-control" placeholder="First Name" />
+                        <input type="text" name="username" class="form-control" placeholder="Username" />
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-user"></i></span>
-                        <input type="text" class="form-control" placeholder="Last Name" />
+                        <input type="text" name="firstname" class="form-control" placeholder="First Name" />
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                        <input type="text" name="lastname" class="form-control" placeholder="Last Name" />
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-                        <input type="text" class="form-control" placeholder="Email" />
+                        <input type="text" name="password" class="form-control" placeholder="Password" />
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-lock"></i></span>
-                        <input type="text" class="form-control" placeholder="Password" />
+                        <input type="text" name="age" class="form-control" placeholder="Age" />
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-lock"></i></span>
-                        <input type="text" class="form-control" placeholder="Confirm Password" />
+                        <input type="text" name="address"class="form-control" placeholder="Address" />
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                        <input type="text" name="telephone"class="form-control" placeholder="Telephone" />
                     </div>
                     <div class="d-grid">
                         <button type="button" class="btn btn-success" style="background:purple;">Signup Now</button>
+                </form>
                         <p class="text-center text-muted mt-2">
                             When You Register by Clicking Signup Button, You Agree to our <a href="#">Terms and
                                 Conditions</a> and <a href="#">Privacy Policy</a>
