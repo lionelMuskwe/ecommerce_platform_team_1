@@ -1,31 +1,102 @@
-h1 { /*this is the heading Readers Republic*/
-    color: white;
-    font-size: 35px;
+/* Global styles */
+h1 {
+    font-size: 36px;
+    margin: 0;
+    color:#fff;
+  }
+
+  h2{
+    color:#fff;
     font-weight: bold;
     text-align: center;
 }
 
-h2 { /*this is the heading Readers Republic*/
-    color: black;
-    font-weight: bold;
+   /* Header styles */
+   header {
+    background-color:purple;
+    color:#fff;
+    padding: 10px;
     text-align: center;
-}
-header {  /*this is the header*/
-    
+  }
+
+  main {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px auto;
+    display: flex;
     justify-content: space-between;
-    padding: 1em;
-    background-color: #d024d0;
-    box-shadow: 0px 0px 8px 1px #303030;
-}
+    text-align: center;
+    color:#fff;
 
-  section { /*this is the heading Readers Republic*/
-    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  section {
+    flex-basis: 30%;
+    margin-bottom: 30px;
+    padding: 350px;
+    background-color: purple;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
 
-}
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    color:#fff;
+    text-align: center;
+  }
+  
+  nav a { /*links to other pages*/
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  nav a:hover { /*links to other pages*/
+    text-decoration: underline;
+  }
+  
 
-
-footer{
-
-
-}
-}
+  
+  form label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  form input,
+  form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  form input[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  /* Footer styles */
+  footer {
+    background-color: #eee;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Responsive styles 
+  @media screen and (max-width: 768px) {
+    main {
+      max-width: 90%;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    section {
+      flex-basis: 90%;
+    }
+  }
+*/
