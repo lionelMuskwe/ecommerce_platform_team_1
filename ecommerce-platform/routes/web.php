@@ -66,7 +66,7 @@ Route::post('/signup', function(){
  $user->age = request('age');
  $user->address = request('address');
  $user->telephone = request('telephone');
- $user->role = request('role');
+ $user->role = 0;
  $user->save();
 
  return redirect('/login');
