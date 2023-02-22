@@ -20,7 +20,7 @@
         <a class="nav-link" href="{{ url('/') }}">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ url('/products') }}">Products</a>
+        <a class="nav-link" href="{{ url('/multiple-products') }}">Products</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ url('/about-us') }}">About Us</a>
@@ -36,7 +36,7 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ url('/login') }}">Log In</a>
-      </li>
+      </li
     </ul>
   </div>
 </nav>
