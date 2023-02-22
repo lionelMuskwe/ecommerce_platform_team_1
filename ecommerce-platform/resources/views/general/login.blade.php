@@ -1,33 +1,46 @@
 @extends("../general/master")
 
 @section("title")
-    Login
+Login
 @endsection()
 
 @section("links")
-    <link rel="stylesheet" href="{{asset('css/login.css')}}">
+<link rel="stylesheet" href="{{asset('css/login.css')}}">
 @endsection
 
 @section("content")
-    {{-- Content goes in this section --}}
-    <h1>Log into your account below</h1>
-    <br>
 
-<form action="/login" method="POST">
-    @csrf
-    <label for="email">Email</label>
-    <input type="text" name="email" placeholder="Email"></br>
-    <label for="password">Password</label>
-    <input type="text" name="password" placeholder="Password"></br>
-    <p>Forgot Password? </p><br>
-    <input type="checkbox" id="rem_me" name="rem_me" value="Remember">
-    <label for="rem_me"> Remember Me</label><br>
-    <button>Log in</button><br>
-</form>
 
-<div class="bottom_section">
-    <a href="{{route('signup')}}">Don't have an account with us? Register now!</a>
-</div>
+<body class="bg-light">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-4 bg-white m-auto rounded-top wrapper">
+                <h2 class="text-center pt-3 mb-3">Login Now</h2>
+
+                <!-- Form start -->
+                <form action="#">
+
+
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="fa fa-envelope"></i></span>
+                        <input type="text" class="form-control" placeholder="Email" />
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                        <input type="text" class="form-control" placeholder="Password" />
+                    </div>
+
+                    <div class="d-grid">
+                        <button type="button" class="btn btn-success" style="background:purple;">Login Now</button>
+
+                        <p class="text-center">
+                            Not registered with us? <a href="{{route('signup')}}"> Register Here </a>
+                        </p>
+                    </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
 
 @endsection()
-
