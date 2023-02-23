@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+// use Illuminate\Foundation\Auth\User;
 use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -15,41 +20,58 @@ class UserController extends Controller
         return view("general/login");
     }
 
-    public function loginRequest(Request $req){
 
-        $data = $req->input();
-        $req->session()->put('username', $data['username']);
-        $username = $req->input('username');
-        $password = $req->input('password');
+    public function signupRequest(Request $request){
+        $this->validate($request,[
+            'username'=>'required',
+            'firstname'=>'required',
+            'lastname'=>'required',
+            'age'=>'required',
+            'address'=>'required',
+            'telephone'=>'required',
+            'password'=>'required',
+        ]);
+
+        User::create([
+            'firstname' =>$request->firstname,
+            'lastname'=>$request->lastname,
+            'age'=>$request->age,
+            'address'=>$request->address,
+            'telephone'=>$request->telephone,
+            'username'=>$request->username,
+            'password'=> Hash::make($request->password),
+            'role'=> 0,
+        ]);
+        Auth() -> attempt($request->only('email','password'));
+      return redirect("/");
+    }
+
+    public function loginRequest(Request $request)
+    {
+        $this->validate($request,[
+            'username'=>'required',
+            "password"=>'required',
+        ]);
 
 
-        $checkLogin = \DB::table('users')->where(['username'=>$username, 'password'=>$password])->get();
-        if(count($checkLogin) >0)
-        {
-            return redirect('home');
+        if (!Auth::attempt($request->only('username','password'))){
+            return back()->with('status','Username or password incorrect');
         }
-        else
-        {
-            echo "Login Failed!";
-        }
+        $request->session()->regenerate();
+        return redirect()->intended('/');
 
 
-        /*$username = $req->input('username');
-        $password = $req->input('password');
+    }
 
-        $checkLogin = \DB::table('users')->where(['username'=>$username, 'password'=>$password])->get();
-        if(count($checkLogin) >0)
-        {
-            echo "Login Successfull";
-        }
-        else
-        {
-            echo "Login Failed!";
-        }*/
+    public function signout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/');
     }
 
     public function show(){
-        $data= User::all();
+        $data = User::all();
         return view('admins/userspage', ['users'=>$data]);
     }
 }
