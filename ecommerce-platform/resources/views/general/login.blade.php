@@ -10,7 +10,6 @@ Login
 
 @section("content")
 
-
 <body class="bg-light">
     <div class="container">
         <div class="row mt-5">
@@ -18,7 +17,7 @@ Login
                 <h2 class="text-center pt-3 mb-3">Login Now</h2>
 
                 <!-- Form start -->
-                <form action="/login" method="POST">
+                <form action="/loginRequest" method="POST">
                 @csrf
 
                     <div class="input-group mb-3">
@@ -32,7 +31,9 @@ Login
 
                     <div class="d-grid">
                         <button type="submit" class="btn btn-success" style="background:purple;">Login Now</button>
+                    </div>
                 </form>
+                    <div>
                         <p class="text-center">
                             Not registered with us? <a href="{{route('signup')}}"> Register Here </a>
                         </p>
