@@ -18,7 +18,7 @@ SIGN UP
                 <h2 class="text-center pt-3">Signup Now</h2>
                 <p class="text-center text-muted lead mb-3">It's free and takes a minute</p>
                 <!-- Form start -->
-                <form action="/signup" method="POST">
+                <form action="/signupRequest" method="POST">
                 @csrf
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-user"></i></span>
