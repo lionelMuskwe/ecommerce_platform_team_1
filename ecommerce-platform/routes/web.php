@@ -34,13 +34,16 @@ Route::get('/employee/{id}', 'EmployeeProfileController@show')->name('employee.s
 Route::get('/employees/{id}', [EmployeeProfileController::class, 'show']);
 
 
-// Employee view all all customer profile 
+// Employee view all all customer profile
 Route::get('/customers/{id}', 'CustomerController@show')->name('customers.show');
 Route::get('/customer-profiles', 'CustomerProfileController@index');
 
 // Homepage Route
-Route::get("/home",[HomeController::class, "home"])->name("home");
-Route::get("",[HomeController::class, "home"]); // if they enter domain name only
+Route::get("/home",[HomeController::class, "home"]);
+
+// Below is an example of how to use middleware to protect a route
+// Route::get("/",[HomeController::class, "home"])->middleware('auth')->name('home'); // if they enter domain name only
+Route::get("/",[HomeController::class, "home"])->name("home"); // if they enter domain name only
 
 //Admin Homepage Route
 Route::get("/admin-home", [HomeController::class, "adminhome"])->name("admin-home");
@@ -75,36 +78,18 @@ Route::get("/signup", [UserController::class, "sign"])->name("signup");
 //Login Route
 Route::get("/login", [UserController::class, "log"])->name("login");
 
+//Sign Out Route
+Route::get("/signout", [UserController::class, "signout"])->name("signout");
+
+Route::post("/loginRequest", [UserController::class, "loginRequest"])->name("loginRequest");
+
 //Users Post request
-Route::post('/signup', function(){
- $user = new User();
- $user->username = request('username');
- $user->firstname = request('firstname');
- $user->lastname = request('lastname');
- $user->password = request('password');
- $user->age = request('age');
- $user->address = request('address');
- $user->telephone = request('telephone');
- $user->role = 0;
- $user->save();
 
- return redirect('/login');
-});
+Route::post("/signupRequest", [UserController::class, "signupRequest"])->name("signupRequest");
 
-//Testing login function
-Route::post('/login', [UserController::class, 'loginRequest']);
+
 
 //Route for showing the list of users
 Route::get('userspage', [UserController::class, 'show']);
 
 Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.detail');
-
-
-
-// Route::get('/authenticated', function () {
-//     if (Auth::check()) {
-//         return 'You are authenticated.';
-//     } else {
-//         return 'You are not authenticated.';
-//     }
-// })->middleware('auth');
