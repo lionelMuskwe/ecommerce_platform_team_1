@@ -49,7 +49,7 @@ SIGN UP
                         <input type="text" name="telephone"class="form-control" placeholder="Telephone" />
                     </div>
                     <div class="d-grid">
-                        <button type="button" class="btn btn-success" style="background:purple;">Signup Now</button>
+                        <button type="submit" class="btn btn-success" style="background:purple;">Signup Now</button>
                 </form>
                         <p class="text-center text-muted mt-2">
                             When You Register by Clicking Signup Button, You Agree to our <a href="#">Terms and
@@ -60,6 +60,7 @@ SIGN UP
                         </p>
                     </div>
             </div>
+
         </div>
     </div>
     </form>

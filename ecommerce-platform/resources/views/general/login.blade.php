@@ -31,7 +31,7 @@ Login
                     </div>
 
                     <div class="d-grid">
-                        <button type="button" class="btn btn-success" style="background:purple;">Login Now</button>
+                        <button type="submit" class="btn btn-success" style="background:purple;">Login Now</button>
                 </form>
                         <p class="text-center">
                             Not registered with us? <a href="{{route('signup')}}"> Register Here </a>
