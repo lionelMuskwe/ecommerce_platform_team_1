@@ -83,6 +83,9 @@ Route::get("/signout", [UserController::class, "signout"])->name("signout");
 
 Route::post("/loginRequest", [UserController::class, "loginRequest"])->name("loginRequest");
 
+// //Basket Route
+// Route::get("/user-basket", [UserController::class, "basket"])->name("basket");
+
 //Users Post request
 
 Route::post("/signupRequest", [UserController::class, "signupRequest"])->name("signupRequest");
