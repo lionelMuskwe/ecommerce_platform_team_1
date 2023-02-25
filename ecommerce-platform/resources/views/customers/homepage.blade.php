@@ -13,7 +13,7 @@
     <header>
 		<h1>Readers Republic</h1>
 
-    
+
 
 	</header>
 	<main>

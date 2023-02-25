@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\CartController;
 use App\Models\User;
 /*
 |--------------------------------------------------------------------------
@@ -33,19 +34,27 @@ Route::get('/employee/{id}', 'EmployeeProfileController@show')->name('employee.s
 Route::get('/employees/{id}', [EmployeeProfileController::class, 'show']);
 
 
-// Employee view all all customer profile 
+// Employee view all all customer profile
 Route::get('/customers/{id}', 'CustomerController@show')->name('customers.show');
 Route::get('/customer-profiles', 'CustomerProfileController@index');
 
 // Homepage Route
-Route::get("/home",[HomeController::class, "home"])->name("home");
-Route::get("",[HomeController::class, "home"]); // if they enter domain name only
+Route::get("/home",[HomeController::class, "home"]);
+
+// Below is an example of how to use middleware to protect a route
+// Route::get("/",[HomeController::class, "home"])->middleware('auth')->name('home'); // if they enter domain name only
+Route::get("/",[HomeController::class, "home"])->name("home"); // if they enter domain name only
 
 //Admin Homepage Route
-Route::get("/admin-home", [HomeController::class], "adminhome")->name("admin-home");
+Route::get("/admin-home", [HomeController::class, "adminhome"])->name("admin-home");
+
+//Admin Add-Employee route
+Route::get("/admin-add-employee", [HomeController::class, "adminAddEmployeePage"])->name("admin-add-employee");
+
+Route::post("/admin-add-employee", [HomeController::class, "adminAddEmployee"])->name("admin-add-employee-submit");
 
 //Employee Homepage Route
-Route::get("/employee-home", [HomeController::class], "employeehome")->name("employee-home");
+Route::get("/employee-home", [HomeController::class, "employeehome"])->name("employee-home");
 
 // About-us Route
 Route::get("/about-us",[HomeController::class, "about"])->name("about-us");
@@ -56,6 +65,10 @@ Route::get("/contact-us",[HomeController::class, "contact"])->name("contact-us")
 //Product Route
 Route::get("/multiple-products",[ProductController::class, "product"])->name("multiple-products");
 
+//Product added to cart Route
+Route::post('/add-to-cart/{id}', [CartController::class, 'addToCart'])->middleware('auth');
+
+
 //Detailed Product Route
 Route::get("/detailed-product", [ProductController::class, "detailedProduct"])->name("detailed-product");
 
@@ -65,19 +78,21 @@ Route::get("/signup", [UserController::class, "sign"])->name("signup");
 //Login Route
 Route::get("/login", [UserController::class, "log"])->name("login");
 
+//Sign Out Route
+Route::get("/signout", [UserController::class, "signout"])->name("signout");
+
+Route::post("/loginRequest", [UserController::class, "loginRequest"])->name("loginRequest");
+
+// //Basket Route
+// Route::get("/user-basket", [UserController::class, "basket"])->name("basket");
+
 //Users Post request
-Route::post('/signup', function(){
- $user = new User();
- $user->firstname = request('firstname');
- $user->lastname = request('lastname');
- $user->password = request('password');
- $user->age = request('age');
- $user->address = request('address');
- $user->telephone = request('telephone');
- $user->role = request('role');
- $user->save();
 
- return redirect('/login');
-});
+Route::post("/signupRequest", [UserController::class, "signupRequest"])->name("signupRequest");
 
 
+
+//Route for showing the list of users
+Route::get('userspage', [UserController::class, 'show']);
+
+Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.detail');

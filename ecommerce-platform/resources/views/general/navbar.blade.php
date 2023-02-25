@@ -29,14 +29,24 @@
         <a class="nav-link" href="{{ url('/contact-us') }}">Contact Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="{{ url('/basket') }}">Basket</a>
+        <a class="nav-link" href="{{ url('/user-basket') }}">Basket</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ url('/signup') }}">Sign Up</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{{ url('/login') }}">Log In</a>
-      </li
+
+        @if (auth()->check() != null)
+          <li class="nav-item">
+            <a class="nav-link bg-secondary " href="">Hello {{ auth()->user()->firstname }}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/signout') }}">Sign Out</a>
+          </li>
+        @else
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/login') }}">Log In</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/signup') }}">Sign Up</a>
+        </li>
+        @endif
     </ul>
   </div>
 </nav>
