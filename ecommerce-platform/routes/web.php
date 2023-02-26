@@ -84,7 +84,10 @@ Route::get("/signout", [UserController::class, "signout"])->name("signout");
 Route::post("/loginRequest", [UserController::class, "loginRequest"])->name("loginRequest");
 
 // //Basket Route
-// Route::get("/user-basket", [UserController::class, "basket"])->name("basket");
+Route::get("/user-basket", [CartController::class, "addToCart"])->name("basket");
+Route::get('/basket', function () {
+    return view('general/user-basket');
+});
 
 //Users Post request
 
