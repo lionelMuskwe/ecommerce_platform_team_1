@@ -16,50 +16,27 @@
                 <th>Quantity</th>
                 <th>Subtotal</th>
             </tr>
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="images/readers-republic-logo.png">
-                        <div>
-                            <p>Example Image</p>
-                            <small>Price: £5.00</small><br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>£5.00</td></td>
-            </tr>
+            
+                @foreach ($cart as $cartItem)
+                <?php
+                    $product = DB::table('products')->where('id', $cartItem->product_id)->first();
+                ?>
+                    <tr>
+                        <td>
+                            <div class="cart-info">
+                                <img src="images/readers-republic-logo.png">
+                                <div>
+                                    <p>{{$product->title}}</p>
+                                    <small>Price: £{{$product->price}}</small><br>
+                                    <a href="">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><input type="number" value="1"></td>
+                        <td>£5.00</td></td>
+                    </tr>
 
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="images/readers-republic-logo.png">
-                        <div>
-                            <p>Example Image</p>
-                            <small>Price: £10.00</small><br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>£10.00</td></td>
-            </tr>
-
-            <tr>
-                <td>
-                    <div class="cart-info">
-                        <img src="images/readers-republic-logo.png">
-                        <div>
-                            <p>Example Image</p>
-                            <small>Price: £7.50</small><br>
-                            <a href="">Remove</a>
-                        </div>
-                    </div>
-                </td>
-                <td><input type="number" value="1"></td>
-                <td>£7.50</td></td>
-            </tr>
+                @endforeach
 
         </table>
 

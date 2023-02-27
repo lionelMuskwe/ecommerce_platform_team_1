@@ -39,11 +39,11 @@ Route::get('/customers/{id}', 'CustomerController@show')->name('customers.show')
 Route::get('/customer-profiles', 'CustomerProfileController@index');
 
 // Homepage Route
-Route::get("/home",[HomeController::class, "home"]);
+Route::get("/home", [HomeController::class, "home"]);
 
 // Below is an example of how to use middleware to protect a route
 // Route::get("/",[HomeController::class, "home"])->middleware('auth')->name('home'); // if they enter domain name only
-Route::get("/",[HomeController::class, "home"])->name("home"); // if they enter domain name only
+Route::get("/", [HomeController::class, "home"])->name("home"); // if they enter domain name only
 
 //Admin Homepage Route
 Route::get("/admin-home", [HomeController::class, "adminhome"])->name("admin-home");
@@ -57,13 +57,13 @@ Route::post("/admin-add-employee", [HomeController::class, "adminAddEmployee"])-
 Route::get("/employee-home", [HomeController::class, "employeehome"])->name("employee-home");
 
 // About-us Route
-Route::get("/about-us",[HomeController::class, "about"])->name("about-us");
+Route::get("/about-us", [HomeController::class, "about"])->name("about-us");
 
 // Contact-us Route
-Route::get("/contact-us",[HomeController::class, "contact"])->name("contact-us");
+Route::get("/contact-us", [HomeController::class, "contact"])->name("contact-us");
 
 //Product Route
-Route::get("/multiple-products",[ProductController::class, "product"])->name("multiple-products");
+Route::get("/multiple-products", [ProductController::class, "product"])->name("multiple-products");
 
 //Product added to cart Route
 Route::post('/add-to-cart/{id}', [CartController::class, 'addToCart'])->middleware('auth');
@@ -84,7 +84,7 @@ Route::get("/signout", [UserController::class, "signout"])->name("signout");
 Route::post("/loginRequest", [UserController::class, "loginRequest"])->name("loginRequest");
 
 // //Basket Route
-Route::get("/user-basket", [CartController::class, "addToCart"])->name("basket");
+Route::get("/user-basket", [CartController::class, "showCart"])->name("basket");
 Route::get('/basket', function () {
     return view('general/user-basket');
 });
