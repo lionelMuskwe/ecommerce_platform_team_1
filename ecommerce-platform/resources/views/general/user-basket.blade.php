@@ -16,10 +16,13 @@
                 <th>Quantity</th>
                 <th>Subtotal</th>
             </tr>
-            
+            <?php
+                $subtotal = 0;
+            ?>
                 @foreach ($cart as $cartItem)
                 <?php
                     $product = DB::table('products')->where('id', $cartItem->product_id)->first();
+                    $subtotal += $product->price * $cartItem->quantity;
                 ?>
                     <tr>
                         <td>
@@ -28,15 +31,21 @@
                                 <div>
                                     <p>{{$product->title}}</p>
                                     <small>Price: £{{$product->price}}</small><br>
+                                    <img src="('images/' + {{$product->image}})" alt="">
                                     <a href="">Remove</a>
                                 </div>
                             </div>
                         </td>
-                        <td><input type="number" value="1"></td>
-                        <td>£5.00</td></td>
+                        <td>{{$cartItem->quantity}}</td>
+                        <td>£{{$product->price * $cartItem->quantity}}</td></td>
                     </tr>
 
                 @endforeach
+
+                <?php
+                    $tax = $subtotal * 0.2;
+                    $total = $subtotal + $tax;
+                ?>
 
         </table>
 
@@ -44,15 +53,15 @@
                 <table>
                     <tr>
                         <td>Subtotal</td>
-                        <td>£22.50</td>
+                        <td>£{{number_format($subtotal, 2)}}</td>
                     </tr>
                     <tr>
                         <td>Tax</td>
-                        <td>£2.50</td>
+                        <td>£{{number_format($tax, 2)}}</td>
                     </tr>
                     <tr>
                         <td>Total</td>
-                        <td>£25.00</td>
+                        <td>£{{number_format($total, 2)}} </td>
                     </tr>
                     
                 </table>
