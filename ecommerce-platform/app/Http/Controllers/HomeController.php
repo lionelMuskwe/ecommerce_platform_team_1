@@ -4,13 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Product;
 
 class HomeController extends Controller
 {
     // This controller is used to control the home page
 
     public function home(Request $request){
-        return view("customers/homepage");
+        $data = Product::all();
+        return view("customers/homepage", ['products'=>$data]);
     }
 
     public function about(Request $request){

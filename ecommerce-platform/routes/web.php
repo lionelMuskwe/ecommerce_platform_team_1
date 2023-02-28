@@ -101,3 +101,4 @@ Route::post("/signupRequest", [UserController::class, "signupRequest"])->name("s
 Route::get('userspage', [UserController::class, 'show']);
 
 Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.detail');
+

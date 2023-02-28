@@ -17,39 +17,24 @@
 	<section class="hot-picks">
 
   <h2>Hot Picks</h2>
-  <div class="carousel-container">
-    <div class="carousel">
-      <div class="carousel-item">
-        <img src="{{ asset('images/1.jpg') }}" alt="Book 1">
+
+
+    <div class="carousel-container">
+      <div class="carousel">
+      @foreach ($products as $product)
+        <div class="carousel-item">
+          <img src="{{ asset('images') }}/{{ $product->image }}" alt="Image" class= "product-image" height="200" width="100">
+        </div>
+      @endforeach
       </div>
-      <div class="carousel-item">
-        <img src="{{ asset('images/2.jpg') }}" alt="Book 2">
-      </div>
-      <div class="carousel-item">
-        <img src="{{ asset('images/3.jpg') }}" alt="Book 3">
-      </div>
-      <div class="carousel-item">
-        <img src="{{ asset('images/4.jpg') }}" alt="Book 4">
-      </div>
-      <div class="carousel-item">
-        <img src="{{ asset('images/5.jpg') }}" alt="Book 5">
-      </div>
-      <div class="carousel-item">
-        <img src="{{ asset('images/6.jpg') }}" alt="Book 6">
-      </div>
-      <div class="carousel-item">
-        <img src="{{ asset('images/7.jpg') }}" alt="Book 7">
-      </div>
-      <div class="carousel-item">
-        <img src="{{ asset('images/8.jpg') }}" alt="Book 8">
+      <div class="carousel-dots"></div>
+      <div class="carousel-controls">
+        <div class="prev-btn">&#8249;</div>
+        <div class="next-btn">&#8250;</div>
       </div>
     </div>
-    <div class="carousel-dots"></div>
-    <div class="carousel-controls">
-      <div class="prev-btn">&#8249;</div>
-      <div class="next-btn">&#8250;</div>
-    </div>
-  </div>
+
+
 </section>
 
 
