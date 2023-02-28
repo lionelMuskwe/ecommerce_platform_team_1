@@ -27,7 +27,6 @@
                     <tr>
                         <td>
                             <div class="cart-info">
-                                <img src="images/readers-republic-logo.png">
                                 <div>
                                     <p>{{$product->title}}</p>
                                     <small>Price: £{{$product->price}}</small><br>
@@ -68,7 +67,7 @@
             <div>
                 <a href="home"><button>Proceed to Checkout</button></a>
             </div>
-            
+
     </div>
 
 @endsection()
