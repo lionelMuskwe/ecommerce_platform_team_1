@@ -31,8 +31,8 @@
                                 <div>
                                     <p>{{$product->title}}</p>
                                     <small>Price: £{{$product->price}}</small><br>
-                                    <img src="('images/' + {{$product->image}})" alt="">
-                                    <a href="">Remove</a>
+                                    <img src="{{ asset('images') }}/{{ $product->image }}" alt="" style="max-width:100%; height:auto">
+                                    <a href="{{ route('remove-from-cart', ['id' => $product->id]) }}">Remove</a>
                                 </div>
                             </div>
                         </td>

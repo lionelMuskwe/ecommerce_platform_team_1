@@ -68,6 +68,8 @@ Route::get("/multiple-products", [ProductController::class, "product"])->name("m
 //Product added to cart Route
 Route::post('/add-to-cart/{id}', [CartController::class, 'addToCart'])->middleware('auth');
 
+//Remove Item from cart
+Route::get('/remove-from-cart/{id}', [CartController::class, 'removeFromCart'])->name("remove-from-cart");
 
 //Detailed Product Route
 Route::get("/detailed-product", [ProductController::class, "detailedProduct"])->name("detailed-product");

@@ -39,4 +39,11 @@ class CartController extends Controller
             return redirect('login');
         }
     }
+
+    function removeFromCart($id)
+    {
+        cart::where('product_id', '=', $id)->delete();
+
+        return redirect()->back();
+    }
 }

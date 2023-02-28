@@ -18,7 +18,7 @@ Products
 
     <div class="product-container">
         <div class="product-information">
-            <img src="Blank-Image.jpg" alt="Image" class= "product-image">
+            <img src="{{ asset('images') }}/{{ $product->image }}" alt="Image" class= "product-image" height="200" width="100">
             {{-- Content goes in this section --}}
             <div class="product-title">
                 {{$product['title']}}
@@ -39,6 +39,4 @@ Products
         </div>
     </div>
 @endforeach
-
-
 @endsection()
