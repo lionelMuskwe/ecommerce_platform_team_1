@@ -63,8 +63,10 @@
                         <td>Total</td>
                         <td>£{{number_format($total, 2)}} </td>
                     </tr>
-                    
                 </table>
+            </div>
+            <div>
+                <a href="home"><button>Proceed to Checkout</button></a>
             </div>
             
     </div>
