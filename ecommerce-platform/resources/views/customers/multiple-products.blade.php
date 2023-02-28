@@ -19,14 +19,16 @@ Products
     <div class="product-container">
         <div class="product-information">
             <img src="Blank-Image.jpg" alt="Image" class= "product-image">
-            {{-- Content goes in this section --}}
+
             <div class="product-title">
                 {{$product['title']}}
             </div>
             <div class="product-description">
                 {{$product['description']}}
             </div>
-            
+            <div class="product-price">
+                {{$product['price']}}
+            </div>
         </div>
 
         <div>
