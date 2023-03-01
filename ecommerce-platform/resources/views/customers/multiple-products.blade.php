@@ -14,14 +14,14 @@ Products
 
 <h1> Products </h1>
 @foreach ($products as $product)
-    <a href="{{ route('product.detail', ['id' => $product['id']]) }}">{{$product['title']}}</a>
+    <!--<a href="{{ route('product.detail', ['id' => $product['id']]) }}">{{$product['title']}}</a>-->
 
     <div class="product-container">
         <div class="product-information">
             <img src="{{ asset('images') }}/{{ $product->image }}" alt="Image" class= "product-image" height="200" width="100">
             {{-- Content goes in this section --}}
             <div class="product-title">
-                {{$product['title']}}
+            <a href="{{ route('product.detail', ['id' => $product['id']]) }}">{{$product['title']}}</a>
             </div>
             <div class="product-description">
                 {{$product['description']}}
