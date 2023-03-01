@@ -5,7 +5,7 @@ Products
 @endsection()
 
 @section("links")
-<!--<link rel="stylesheet" href="{{asset('css/multiple-products.css')}}">
+    <!--<link rel="stylesheet" href="{{asset('css/multiple-products.css')}}">
     <link rel="stylesheet" href="{{asset('css/multiple-products.css')}}">-->
     <a href="Downloads/Blank-Image.jpg">
 @endsection
@@ -18,7 +18,7 @@ Products
 
     <div class="product-container">
         <div class="product-information">
-            <img src="{{ asset('images') }}/{{ $product->image }}" alt="Image" class= "product-image" height="200" width="100">
+            <img src="{{ asset('images') }}/{{ $product->image }}" alt="Image" class= "product-image" height="250" width="150">
             {{-- Content goes in this section --}}
             <div class="product-title">
             <a href="{{ route('product.detail', ['id' => $product['id']]) }}">{{$product['title']}}</a>
