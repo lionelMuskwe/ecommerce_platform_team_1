@@ -5,8 +5,8 @@ Products
 @endsection()
 
 @section("links")
-<link rel="stylesheet" href="{{asset('css/multiple-products.css')}}">
-    <link rel="stylesheet" href="{{asset('css/multiple-products.css')}}">
+<!--<link rel="stylesheet" href="{{asset('css/multiple-products.css')}}">
+    <link rel="stylesheet" href="{{asset('css/multiple-products.css')}}">-->
     <a href="Downloads/Blank-Image.jpg">
 @endsection
 
