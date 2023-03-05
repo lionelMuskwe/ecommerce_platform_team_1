@@ -10,9 +10,9 @@
 
 @section("content")
     {{-- Content goes in this section --}}
-    <h1>Add Employee</h1>
+    <h1>Add products</h1>
     <br>
-    <p>Remember to always write clean code</p>
+    {{--<p>Remember to always write clean code</p>--}}
 
     <div>
         <form action="{{route('admin-add-product-submit')}}" method="POST">

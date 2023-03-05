@@ -34,7 +34,7 @@
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column">
                         <p>View All users!<p>
-                        <button type="button" class="btn btn-primary mt-auto">View</button>
+                        <a href="{{ route ('userspage') }}"><button type="button" class="btn btn-primary mt-auto">View</button></a>
                     </div>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                 <div class="card h-100">
                     <div class="card-body d-flex flex-column">
                         <p>View all Products!<p>
-                        <button type="button" class="btn btn-primary mt-auto">View</button>
+                        <a href="{{ route('showProducts') }}"><button type="button" class="btn btn-primary mt-auto">View</button></a>
                     </div>
                 </div>
             </div>
