@@ -5,13 +5,15 @@ Products
 @endsection()
 
 @section("links")
-    <!--<link rel="stylesheet" href="{{asset('css/multiple-products.css')}}">
-    <link rel="stylesheet" href="{{asset('css/multiple-products.css')}}">-->
-    <a href="Downloads/Blank-Image.jpg">
+    <link rel="stylesheet" href="{{asset('css/multiple-products.css')}}">
 @endsection
 
 @section("content")
-
+<style>
+h1 {
+    color: blueviolet;
+  }
+</style>
 <h1> Products </h1>
 @foreach ($products as $product)
     <!--<a href="{{ route('product.detail', ['id' => $product['id']]) }}">{{$product['title']}}</a>-->
@@ -23,13 +25,26 @@ Products
             <div class="product-title">
             <a href="{{ route('product.detail', ['id' => $product['id']]) }}">{{$product['title']}}</a>
             </div>
-            <div class="product-description">
-                {{$product['description']}}
-            </div>
             <div class="product-price">
                 £{{$product['price']}}
             </div>
         </div>
+
+        <style>
+            a:link {
+              color: blueviolet;
+            }
+            a:visited {
+                color: gold;
+            }
+            a:hover {
+                color: hotpink
+            }
+
+            a:active {
+                color: dimgrey
+            }
+            </style>
 
         <div>
             <form action="{{ url('add-to-cart', $product->id) }}" method="POST">
