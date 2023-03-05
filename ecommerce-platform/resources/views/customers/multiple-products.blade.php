@@ -32,15 +32,11 @@ h1 {
 
         <style>
             a:link {
-              color: blueviolet;
-            }
-            a:visited {
-                color: gold;
+              color: black;
             }
             a:hover {
-                color: hotpink
+                color: blueviolet
             }
-
             a:active {
                 color: dimgrey
             }
