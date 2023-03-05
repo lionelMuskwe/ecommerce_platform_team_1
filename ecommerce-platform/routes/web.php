@@ -46,12 +46,16 @@ Route::get("/home", [HomeController::class, "home"]);
 Route::get("/", [HomeController::class, "home"])->name("home"); // if they enter domain name only
 
 //Admin Homepage Route
-Route::get("/admin-home", [HomeController::class, "adminhome"])->name("admin-home");
+Route::get('/admin-home', [HomeController::class, 'adminhome'])->name('admin-home');
 
 //Admin Add-Employee route
 Route::get("/admin-add-employee", [HomeController::class, "adminAddEmployeePage"])->name("admin-add-employee");
 
 Route::post("/admin-add-employee", [HomeController::class, "adminAddEmployee"])->name("admin-add-employee-submit");
+
+//Admin Add-Product route
+Route::get("/admin-add-product", [HomeController::class, "adminAddProductPage"])->name("admin-add-product");
+Route::post("/admin-add-product", [HomeController::class, "adminAddProduct"])->name("admin-add-product-submit");
 
 //Employee Homepage Route
 Route::get("/employee-home", [HomeController::class, "employeehome"])->name("employee-home");
@@ -101,4 +105,3 @@ Route::post("/signupRequest", [UserController::class, "signupRequest"])->name("s
 Route::get('userspage', [UserController::class, 'show']);
 
 Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.detail');
-

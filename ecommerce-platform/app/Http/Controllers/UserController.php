@@ -66,7 +66,7 @@ class UserController extends Controller
 
         if ($user->role == 2) {
             $request->session()->regenerate();
-            return view('admins/homepage');
+            return redirect()->route('admin-home', compact('user'));
         }
 
         $request->session()->regenerate();
