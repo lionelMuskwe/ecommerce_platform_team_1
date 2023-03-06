@@ -1,4 +1,4 @@
-@extends("../general/admin.master")
+@extends("../general/admin-master")
 
 @section("title")
 Admin Home
@@ -10,6 +10,7 @@ Admin Home
 
 @section("content")
 <div class="container-fluid banner">
+
     <div class="row">
         <div class="col-md-12">
             <nav class="navbar navbar-md">
@@ -38,7 +39,7 @@ Admin Home
             <p class="text-center">
                 Welcome Admin
             </p>
-            <a href="#" class="btn btn-md text-center">GET STARTED</a>
+            <!-- <a href="#" class="btn btn-md text-center">GET STARTED</a> -->
 
         </div>
     </div>
