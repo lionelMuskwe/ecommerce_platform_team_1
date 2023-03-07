@@ -1,70 +1,9 @@
 body {
-    margin: 0;
-    padding: 0;
-    background: #fff;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background-image: url('/images/Sky.jpeg');
-    background-repeat: no-repeat;
+    background-image: url('/images/Pexels.jpg');
     background-size: cover;
-    /* color: #fff; */
+    height: 110vh;
 }
 
-.banner {
-    height: 100vh;
-    width: 100%;
-    background-position: top;
-    /* background-attachment: fixed; */
-}
-
-.banner .navbar {
-    margin-top: 4%;
-}
-
-.banner .navbar-brand {
-    color: #fff;
-    font-size: 1.8em;
-    font-weight: 700;
-    margin-left: 10%;
-}
-
-.banner .nav {
-    margin-right: 10%;
-}
-
-.banner .nav li a {
-    color: #aaa;
-    font-size: 1.2em;
-}
-
-.banner .info {
-    margin-top: 15%;
-    transform: translateY(-15%);
-}
-
-.banner .info h1 {
-    font-size: 2.5em;
-    font-weight: 700;
-    color: #fff;
-    letter-spacing: 2px;
-}
-
-.banner .info p {
-    font-size: 2.5em;
-    font-weight: 500;
-    color: #aaa;
-    letter-spacing: 2px;
-}
-
-.banner .info a {
-    margin-left: 50%;
-    transform: translateX(-50%);
-    color: #fff;
-    background: purple;
-    padding: 10px 20px;
-    font-size: 2em;
-    font-weight: 600;
-}
-
-.banner .info a:hover {
-    background: rgb(230, 70, 230);
+.navbar {
+    color: #fff
 }
