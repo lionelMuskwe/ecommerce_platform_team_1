@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 
 use Illuminate\Http\Request;
 
@@ -10,8 +11,10 @@ class ProductController extends Controller
 {
     public function product(Request $request)
     {
-        $data = Product::all();
-        return view("customers/multiple-products", ['products' => $data]);
+        $categories = Category::all();
+        $products = Product::all();
+
+        return view('customers/multiple-products', compact('categories', 'products'));
     }
 
     public function detailedProduct(Request $request)
@@ -29,5 +32,14 @@ class ProductController extends Controller
     {
         $data = Product::find($id);
         return view('customers/detailed-product', ['products' => $data]);
+    }
+
+    public function filterPage($id)
+    {
+        $categories = Category::all();
+        $products = Product::whereIn('category_id', [$id])->get();
+//         dd($products);
+
+        return view('customers/multiple-products', compact('categories', 'products'));
     }
 }
