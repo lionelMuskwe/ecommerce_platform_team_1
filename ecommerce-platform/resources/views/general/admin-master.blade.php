@@ -24,7 +24,7 @@
 
 <body style="min-height: 100vh; display:flex; flex-direction:column">
 
-    <!-- @include('general/navbar') -->
+@include('general/admin-navbar')
     <div class="container">
         @yield('content')
     </div>
