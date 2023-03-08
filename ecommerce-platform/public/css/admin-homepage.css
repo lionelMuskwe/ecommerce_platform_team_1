@@ -1,0 +1,9 @@
+body {
+    background-image: url('/images/Pexels.jpg');
+    background-size: cover;
+    height: 100%;
+}
+
+.navbar {
+    color: #fff
+}
