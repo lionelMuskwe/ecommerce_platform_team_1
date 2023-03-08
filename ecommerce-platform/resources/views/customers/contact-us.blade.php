@@ -76,13 +76,13 @@
                 <div class="col-md-3 text-center text-primary">
                     <ul class="list-unstyled mb-0">
                         <li><i class="fas fa-map-marker-alt fa-2x"></i>
-                            <p class="text-dark">New York, NY 10012, US</p></li>
+                            <p class="text-dark">New York, NY 2333, US</p></li>
 
                         <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                            <p class="text-dark">+ 01 234 567 89</p></li>
+                            <p class="text-dark">+44 7729 69677</p></li>
 
                         <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                            <p class="text-dark">info@example.com</p></li>
+                            <p class="text-dark">ReadersRepublic23@gmail.com</p></li>
 
                     </ul>
 
