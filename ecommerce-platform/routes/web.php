@@ -108,3 +108,5 @@ Route::get('userspage', [UserController::class, 'show'])->name("userspage");
 Route::get('products-page', [ProductController::class, 'showProducts'])->name("showProducts");
 
 Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.detail');
+
+Route::get('filter/{id}', [ProductController::class, 'filterPage'])->name('product.filter');
