@@ -1,0 +1,62 @@
+.logo {
+    width: 150px;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: purple !important;
+  }
+  
+  .dropdown-menu {
+    padding: 0;
+  }
+  
+  .dropdown-menu a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .dropdown-menu a:hover {
+    background-color: #f7f7f7;
+    color: purple;
+  }
+  
+  .dropdown-menu .nav-link {
+    padding: 10px;
+  }
+  
+  .dropdown-menu .nav-link:hover {
+    background-color: #f7f7f7;
+    color: purple;
+  }
+  
+  .form-control:focus,
+  button:focus {
+    outline: none;
+    box-shadow: none !important;
+  }
+  
+  .form-control {
+    width: 450px;
+  }
+  
+  .form-inline {
+    padding-right: 50px;
+  }
+  
+  .form-control::placeholder {
+    color: purple;
+    width: fit-content;
+  }
+  
+  .input-group-append button {
+    background-color: purple;
+    color: white;
+    border: none;
+  }
+  
+  .input-group-append button:hover {
+    background-color: #6F42C1;
+  }
+  
