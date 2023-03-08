@@ -23,7 +23,7 @@ Admin Home
     <div class="dropdown">
         <button class="dropbtn">Employees</button>
         <div class="dropdown-content">
-            <a href="{{ url('/add-employee') }}">Add Employee</a>
+            <a href="{{ url('/admin-add-employee') }}">Add Employee</a>
             <a href="#">Employee List</a>
         </div>
     </div>

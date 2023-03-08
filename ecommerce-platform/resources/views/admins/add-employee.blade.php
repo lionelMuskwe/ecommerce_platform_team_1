@@ -1,4 +1,4 @@
-@extends("../general/master")
+@extends("../general/admin-master")
 
 @section("title")
     Admin Home
@@ -10,9 +10,10 @@
 
 @section("content")
     {{-- Content goes in this section --}}
-    <h1>Add Employee</h1>
+
+    <h1 class="font-weight-bold" style="font-size: 50px">ADD EMPLOYEE</h1>
     <br>
-    <p>Remember to always write clean code</p>
+   
 
     <div>
         <form action="{{route('admin-add-employee-submit')}}" method="POST">
