@@ -10,7 +10,7 @@
 
 @section("content")
     <div class="container" style="padding-top: 50px; padding-bottom: 50px">
-        <form action="" method="POST">
+        <form action="" method="POST" style="padding:100px">
             <div class="form-group">
                 <label for="">Deliver To</label>
                 <input type="text" class="form-control" name="deliver-to" placeholder="Name"><br>
@@ -19,8 +19,14 @@
                 <label for="">Delivery Address</label><br>
                 <input type="text" class="form-control" name="street-address" placeholder="Street Address">
                 <input type="text" class="form-control" name="street-address2" placeholder="Street Address Line 2">
-                <input type="text" class="form-control" name="city" placeholder="City">
-                <input type="text" class="form-control" name="postcode" placeholder="Postal / Zip Code">
+                <div class="row">
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="city" placeholder="City">
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" name="postcode" placeholder="Postal / Zip Code">
+                    </div>
+                </div>
             </div>
         </form>
     </div>

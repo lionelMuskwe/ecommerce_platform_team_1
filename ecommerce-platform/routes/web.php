@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderItemController;
 use App\Models\User;
 /*
 |--------------------------------------------------------------------------
@@ -108,3 +109,7 @@ Route::get('userspage', [UserController::class, 'show'])->name("userspage");
 Route::get('products-page', [ProductController::class, 'showProducts'])->name("showProducts");
 
 Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.detail');
+
+Route::get('/delivery-details', function () {
+    return view('customers/delivery-details');
+});
