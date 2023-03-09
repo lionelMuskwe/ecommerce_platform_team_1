@@ -11,6 +11,8 @@
 @section("content")
     <div class="container" style="padding-top: 50px; padding-bottom: 50px">
         <form action="" method="POST" style="padding:100px">
+            @csrf
+
             <div class="form-group">
                 <label for="">Deliver To</label>
                 <input type="text" class="form-control" name="deliver-to" placeholder="Name"><br>
@@ -28,6 +30,8 @@
                     </div>
                 </div>
             </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Proceed</button>
         </form>
     </div>
 @endsection

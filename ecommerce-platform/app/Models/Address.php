@@ -16,4 +16,5 @@ class Address extends Model
         "postcode"
     ];
 
+    public $timestamps = false;
 }

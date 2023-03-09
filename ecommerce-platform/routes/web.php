@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AddressController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
@@ -113,3 +114,5 @@ Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.
 Route::get('/delivery-details', function () {
     return view('customers/delivery-details');
 });
+
+Route::post('/delivery-details', [AddressController::class, 'index'])->name("delivery-details");
