@@ -1,7 +1,7 @@
 @extends("../general/master")
 
 @section("title")
-SIGN UP
+Payment
 @endsection()
 
 @section("links")
