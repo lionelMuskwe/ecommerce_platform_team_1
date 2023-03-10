@@ -20,7 +20,7 @@ Payment
     <label for="">Sort Code</label>
     <input type="text" name="sort_code" placeholder="Enter Sort Code"><br>
     <label for="">Expiration Date</label>
-    <input type="date" name="expiration_date"><br>
+    <input type="text" name="expiration_date"><br>
     <button type="submit">Checkout</button>
     </form>
 
