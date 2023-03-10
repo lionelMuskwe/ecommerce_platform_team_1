@@ -14,8 +14,8 @@
     <br>
     {{--<p>Remember to always write clean code</p>--}}
 
-    <div>
-        <form action="{{route('admin-add-product-submit')}}" method="POST">
+    <div class="form-group">
+        <form action="{{route('admin-add-product-submit')}}" method="POST" enctype="multipart/form-data">
             
             @csrf
 
@@ -29,13 +29,13 @@
             <input type="text" name="author"><br>
 
             <label for="description">Description</label>
-            <textarea name="Text1" cols="40" rows="5"></textarea><br>
-
+            <input type="text" name="description" style="width:250px;height:150px;"><br>
+            
             <label for="price">Price</label>
             <input type="text" name="price"><br>
 
             <label for="image">Image</label>
-            <input type="text" name="image"><br>
+            <input type="file" class="form-control-file" name="image"><br>
             
             <label for="date_published">Date Published</label>
             <input type="date" name="date-published" id=""><br>

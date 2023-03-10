@@ -71,6 +71,12 @@ class HomeController extends Controller
         $product->description = $request->input('description');
         $product->price = $request->input('price');
         $product->image = $request->input('image');
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $filename = $file->getClientOriginalName();
+            $file->move(public_path('images'), $filename);
+            $product->image = $filename;
+        }
         $product->date_published = $request->input('date-published');
         $product->publisher = $request->input('publisher');
         $product->inventory_id = $request->input('inventory-id');
