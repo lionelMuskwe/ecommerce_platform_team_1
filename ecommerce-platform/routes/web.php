@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderItemController;
+use App\Http\Controllers\PaymentController;
 use App\Models\User;
 /*
 |--------------------------------------------------------------------------
@@ -114,3 +115,9 @@ Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.
 Route::get('delivery-details', [AddressController::class, 'index'])->name('delivery-details');
 
 Route::post('/delivery-details', [AddressController::class, 'addAddress'])->name("delivery-details-submit");
+
+Route::get('filter/{id}', [ProductController::class, 'filterPage'])->name('product.filter');
+
+Route::get('/paymentDetail', [PaymentController::class, 'showPage'])->name("showPage");
+
+Route::post('/paymentDetail', [PaymentController::class, 'index'])->name("paymentDetail");
