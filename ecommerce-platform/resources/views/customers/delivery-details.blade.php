@@ -29,6 +29,7 @@
                         <input type="text" class="form-control" name="postcode" placeholder="Postal / Zip Code">
                     </div>
                 </div>
+                <input type="text" class="form-control" name="delivery-instructions" placeholder="Delivery Instructions">
             </div>
             <br>
             <button type="submit" class="btn btn-primary">Proceed</button>

@@ -111,8 +111,6 @@ Route::get('products-page', [ProductController::class, 'showProducts'])->name("s
 
 Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.detail');
 
-Route::get('/delivery-details', function () {
-    return view('customers/delivery-details');
-});
+Route::get('delivery-details', [AddressController::class, 'index'])->name('delivery-details');
 
-Route::post('/delivery-details', [AddressController::class, 'index'])->name("delivery-details");
+Route::post('/delivery-details', [AddressController::class, 'addAddress'])->name("delivery-details-submit");
