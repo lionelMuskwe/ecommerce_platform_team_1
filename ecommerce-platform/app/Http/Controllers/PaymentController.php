@@ -10,7 +10,7 @@ class PaymentController extends Controller
             return view('customers/payment');
        }
 
-       public function index(Request $request){
-        return redirect()->route('home');
+       public function processPayment(Request $request){
+        return redirect()->route('confirmation-page');
        }
 }
