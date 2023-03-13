@@ -5,7 +5,7 @@
 @endsection()
 
 @section("links")
-    <link rel="stylesheet" href="{{asset('css/admin-homepage.css')}}">
+    <link rel="stylesheet" href="{{asset('css/add-employee.css')}}">
 @endsection
 
 @section("content")
@@ -21,35 +21,35 @@
             @csrf
 
             <label for="fname">First Name: </label>
-            <input type="text" id="fname" name="fname"><br>
+            <input type="text" id="fname" name="fname"><br><br>
 
             <label for="surname">Surname: </label>
-            <input type="text" id="surname" name="surname"><br>
+            <input type="text" id="surname" name="surname"><br><br>
 
             <label for="username">Username: </label>
-            <input type="text" id="username" name="username"><br>
+            <input type="text" id="username" name="username"><br><br>
 
             <label for="age">Age: </label>
-            <input type="text" id="age" name="age"><br>
+            <input type="text" id="age" name="age"><br><br>
 
             <label for="address">Address: </label>
-            <input type="text" id="address" name="address"><br>
+            <input type="text" id="address" name="address"><br><br>
 
             <label for="telephone">Phone number: </label>
-            <input type="text" id="telephone" name="telephone"><br>            
+            <input type="text" id="telephone" name="telephone"><br><br>            
 
             <label for="email">Email: </label>
-            <input type="email" id="email" name="email" placeholder="example@email.com"><br>
+            <input type="email" id="email" name="email" placeholder="example@email.com"><br><br>
 
             <label for="password">Password: </label>
-            <input type="password" id="password" name="password"><br>
+            <input type="password" id="password" name="password"><br><br>
 
             <label for="gender">Gender: </label>
             <select name="gender" id="gender">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
-            </select><br>
+            </select><br><br>
 
 
             <button type="submit">Add employee</button>
