@@ -5,14 +5,13 @@
 @endsection()
 
 @section("links")
-    <link rel="stylesheet" href="{{asset('css/admin-homepage.css')}}">
+    <link rel="stylesheet" href="{{asset('css/add-product.css')}}">
 @endsection
 
 @section("content")
     {{-- Content goes in this section --}}
-    <h1>Add products</h1>
+    <br><h1>Add products</h1>
     <br>
-    {{--<p>Remember to always write clean code</p>--}}
 
     <div class="form-group">
         <form action="{{route('admin-add-product-submit')}}" method="POST" enctype="multipart/form-data">
@@ -35,7 +34,7 @@
             <input type="text" name="price"><br>
 
             <label for="image">Image</label>
-            <input type="file" class="form-control-file" name="image"><br>
+            <input type="file" class="form-control-file" name="image" style="width: 300px;"><br>
             
             <label for="date_published">Date Published</label>
             <input type="date" name="date-published" id=""><br>
@@ -43,13 +42,13 @@
             <label for="publisher">Publisher</label>
             <input type="text" name="publisher"><br>
 
-            <label for="inventory-id">Inventory id</label>
+            <label for="inventory-id">Inventory Id</label>
             <input type="text" name="inventory-id"><br>
 
-            <label for="category-id">category id</label>
-            <input type="text" name="category-id"><br>
+            <label for="category-id">Category Id</label>
+            <input type="text" name="category-id"><br><br>
 
-            <button type="submit">Add Product</button>
+            <button type="submit">Add Product</button><br><br>
 
 
         </form>
