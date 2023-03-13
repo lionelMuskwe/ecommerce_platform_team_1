@@ -56,6 +56,9 @@ Route::post("/admin-add-employee", [HomeController::class, "adminAddEmployee"])-
 //Employee Homepage Route
 Route::get("/employee-home", [HomeController::class, "employeehome"])->name("employee-home");
 
+//Admin Complaints Route
+Route::get("/admin-complaints", [HomeController::class, "adminComplaintsPage"])->name("admin-complaints");
+
 // About-us Route
 Route::get("/about-us", [HomeController::class, "about"])->name("about-us");
 

@@ -51,4 +51,10 @@ class HomeController extends Controller
     public function employeehome(Request $request){
         return view("employees/homepage");
     }
+
+    public function adminComplaintsPage(Request $request){
+        return view("admins/complaints");
+    }
+
+   
 }
