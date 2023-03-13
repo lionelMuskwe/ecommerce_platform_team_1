@@ -11,46 +11,22 @@ Payment
 @section("content")
 {{-- Content goes in this section --}}
 
-<body>
+    {{-- <form action="" method="POST" id="paymentForm"> --}}
+    <form action="{{route('payment-details-submit')}}" method="POST" id="paymentForm" onsubmit="return validatePaymentDetails()">
+      @csrf
+      <label for="">Card Number</label>
+      <input type="text" name="account_number" value="1252689578456325" id="account_number" placeholder="Card Number"><br>
 
-    <form action="/paymentDetails" method="POST" id="paymentForm">
-    @csrf
-    <label for="">Card Number</label>
-    <input type="text" name="account_number" id="account_number" placeholder="Card Number"><br>
-    <label for="">CVV</label>
-    <input type="text" name="cvv" id="cvv" placeholder="cvv"><br>
-    <label for="">Expiration Date</label>
-    <input type="text" name="expiration_date" id = "expiration_date"><br>
-    <button type="submit">Checkout</button>
+      <label for="">CVV</label>
+      <input type="text" name="cvv" value="123" id="cvv" placeholder="cvv"><br>
+
+      <label for="">Expiration Date</label>
+      <input type="text" name="expiration_date" value="09/32" id ="expiration_date"><br>
+
+      <button type="submit" id="submit-button">Checkout</button>
     </form>
 
-    <script>
-        const paymentForm = document.getElementById("paymentForm");
 
-        paymentForm.addEventListener("submit", function(event){
-            event.preventDefault();
-
-            const accountNumber = document.getElementById("account_number").value;
-            const cvvCode = document.getElementById("cvv").value;
-            const expirationDate = document.getElementById("expiration_date").value;
-
-            const accountNumberRegex = /^[0-9]{16}$/;
-            const cvvRegex = /^[0-9]{3}$/;
-
-            if (!accountNumberRegex.test(accountNumber)) {
-              alert("Card Number must contain 16 digits");
-              return false;
-            }
-
-            if (!cvvRegex.test(cvvCode)) {
-              alert("CVV number must contain 3 digits");
-              return false;
-            }
-
-            window.location.href="/home";
-        });
-    </script>
-
-</body>
+    <script defer src="{{asset('js/payment.js')}}"></script>
 
 @endsection()
