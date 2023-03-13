@@ -18,7 +18,7 @@ Customer Complaints
 @section("content")
 
 <div class="container mt-5">
-    <h2 class="text-center mb-4">Customer Complaints Table</h2>
+    <h2 class="text-center mb-4">Customer Complaints</h2>
     <table class="table table-striped table-bordered table-hover">
         <thead>
             <tr>
