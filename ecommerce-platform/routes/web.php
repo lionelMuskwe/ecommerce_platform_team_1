@@ -121,3 +121,7 @@ Route::get('filter/{id}', [ProductController::class, 'filterPage'])->name('produ
 Route::get('/paymentDetail', [PaymentController::class, 'showPage'])->name("payment-details");
 
 Route::post('/paymentDetail', [PaymentController::class, 'processPayment'])->name("payment-details-submit");
+
+
+// Confirmation page route
+Route::get('/confirmation', [OrderItemController::class, 'show'])->name("confirmation-page");
