@@ -33,9 +33,9 @@ class AddressController extends Controller
 
             $address->save();
 
-            return redirect()->route('home');
+            return redirect()->route('payment-details');
         } else {
-            return redirect()->route('home');
+            return redirect()->route('/delivery-details');
         }
     }
 }
