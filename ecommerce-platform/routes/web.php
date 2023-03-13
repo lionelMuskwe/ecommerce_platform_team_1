@@ -118,6 +118,6 @@ Route::post('/delivery-details', [AddressController::class, 'addAddress'])->name
 
 Route::get('filter/{id}', [ProductController::class, 'filterPage'])->name('product.filter');
 
-Route::get('/paymentDetail', [PaymentController::class, 'showPage'])->name("showPage");
+Route::get('/paymentDetail', [PaymentController::class, 'showPage'])->name("payment-details");
 
-Route::post('/paymentDetail', [PaymentController::class, 'index'])->name("paymentDetail");
+Route::post('/paymentDetail', [PaymentController::class, 'processPayment'])->name("payment-details-submit");
