@@ -76,11 +76,13 @@ form{
 form button{
     width: 200px;
     height: 40px;
+    font-size: large;
 }
 
 form label{
     font-size: x-large;
     width: 250px;
+    display: inline-block;
 }
 
 form input{

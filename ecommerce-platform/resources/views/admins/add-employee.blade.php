@@ -11,7 +11,7 @@
 @section("content")
     {{-- Content goes in this section --}}
 
-    <h1 class="font-weight-bold" style="font-size: 50px">ADD EMPLOYEE</h1>
+    <br><h1 class="font-weight-bold" style="font-size: 50px">ADD EMPLOYEE</h1>
     <br>
    
 
@@ -39,20 +39,20 @@
             <input type="text" id="telephone" name="telephone"><br><br>            
 
             <label for="email">Email: </label>
-            <input type="email" id="email" name="email" placeholder="example@email.com"><br><br>
+            <input type="email" id="email" name="email" placeholder="example@email.com" style="font-size: large;"><br><br>
 
             <label for="password">Password: </label>
             <input type="password" id="password" name="password"><br><br>
 
             <label for="gender">Gender: </label>
-            <select name="gender" id="gender">
+            <select name="gender" id="gender" style="width: 250px;">
                 <option value="male">Male</option>
                 <option value="female">Female</option>
                 <option value="other">Other</option>
-            </select><br><br>
+            </select><br><br><br>
 
 
-            <button type="submit">Add employee</button>
+            <button type="submit">Add Employee</button>
 
 
         </form>

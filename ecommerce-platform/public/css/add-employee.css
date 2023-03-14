@@ -76,15 +76,17 @@ form{
 form button{
     width: 200px;
     height: 40px;
+    font-size: large;
 }
 
 form label{
     font-size: x-large;
-    width: 600px;
+    width: 250px;
+    display: inline-block;
 }
 
 form input{
-    width: 200px;
+    width: 250px;
     height: 25px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -93,5 +95,7 @@ form input{
 form select{
     width: 200px;
     height: 25px;
-    font-size: 17px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: large;
 }
