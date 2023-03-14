@@ -65,4 +65,37 @@ nav .dropdown:hover .dropdown-content {
 
 h1 {
     color: #fff;
+    text-align: center;
+}
+
+form{
+    text-align: center;
+    color: #fff;
+}
+
+form button{
+    width: 200px;
+    height: 40px;
+    font-size: large;
+}
+
+form label{
+    font-size: x-large;
+    width: 250px;
+    display: inline-block;
+}
+
+form input{
+    width: 250px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form select{
+    width: 200px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: large;
 }

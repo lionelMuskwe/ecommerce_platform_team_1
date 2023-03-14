@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\AddressController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderItemController;
+use App\Http\Controllers\PaymentController;
 use App\Models\User;
 /*
 |--------------------------------------------------------------------------
@@ -46,15 +49,22 @@ Route::get("/home", [HomeController::class, "home"]);
 Route::get("/", [HomeController::class, "home"])->name("home"); // if they enter domain name only
 
 //Admin Homepage Route
-Route::get("/admin-home", [HomeController::class, "adminhome"])->name("admin-home");
+Route::get('/admin-home', [HomeController::class, 'adminhome'])->name('admin-home');
 
 //Admin Add-Employee route
 Route::get("/admin-add-employee", [HomeController::class, "adminAddEmployeePage"])->name("admin-add-employee");
 
 Route::post("/admin-add-employee", [HomeController::class, "adminAddEmployee"])->name("admin-add-employee-submit");
 
+//Admin Add-Product route
+Route::get("/admin-add-product", [HomeController::class, "adminAddProductPage"])->name("admin-add-product");
+Route::post("/admin-add-product", [HomeController::class, "adminAddProduct"])->name("admin-add-product-submit");
+
 //Employee Homepage Route
 Route::get("/employee-home", [HomeController::class, "employeehome"])->name("employee-home");
+
+//Admin Complaints Route
+Route::get("/admin-complaints", [HomeController::class, "adminComplaintsPage"])->name("admin-complaints");
 
 // About-us Route
 Route::get("/about-us", [HomeController::class, "about"])->name("about-us");
@@ -98,7 +108,23 @@ Route::post("/signupRequest", [UserController::class, "signupRequest"])->name("s
 
 
 //Route for showing the list of users
-Route::get('userspage', [UserController::class, 'show']);
+Route::get('userspage', [UserController::class, 'show'])->name("userspage");
+
+//Route for showing list of products
+Route::get('products-page', [ProductController::class, 'showProducts'])->name("showProducts");
 
 Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.detail');
 
+Route::get('delivery-details', [AddressController::class, 'index'])->name('delivery-details');
+
+Route::post('/delivery-details', [AddressController::class, 'addAddress'])->name("delivery-details-submit");
+
+Route::get('filter/{id}', [ProductController::class, 'filterPage'])->name('product.filter');
+
+Route::get('/paymentDetail', [PaymentController::class, 'showPage'])->name("payment-details");
+
+Route::post('/paymentDetail', [PaymentController::class, 'processPayment'])->name("payment-details-submit");
+
+
+// Confirmation page route
+Route::get('/confirmation', [OrderItemController::class, 'show'])->name("confirmation-page");
