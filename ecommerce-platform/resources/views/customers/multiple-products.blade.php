@@ -95,8 +95,8 @@ h1 {
 
         <div class="col-lg-4">
                     <div class="product-information">
-                    <img src="{{ asset('images') }}/{{ $product->image }}" alt="Image" class= "product-image" height="250" width="150">
-                    <a href="{{ route('product.detail', ['id' => $product['id']]) }}">{{$product['image']}}</a>
+                    <a href="{{ route('product.detail', ['id' => $product['id']]) }}"><a href="{{ route('product.detail', ['id' => $product['id']]) }}"><img src="{{ asset('images') }}/{{ $product->image }}" alt="Image" class= "product-image" height="250" width="150"></a>
+                    
                     {{-- Content goes in this section --}}
                     </div>
                     {{-- <div class="container"
