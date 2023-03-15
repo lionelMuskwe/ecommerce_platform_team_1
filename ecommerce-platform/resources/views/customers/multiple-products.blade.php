@@ -21,19 +21,6 @@ h1 {
         <a href = "{{route('product.filter', ['id' => $genre['id']])}}"><button>{{$genre['name']}}</button></a>
 @endforeach
 
-<header>
-    <h1> Our Books </h1>
-
-    <p> Welcome to our online bookstore! Here, you'll find an extensive collection of books spanning across various genres, including fiction, non-fiction, biographies, self-help, and more. We believe that books have the power to transport us to different worlds, expand our knowledge, and inspire us to be better versions of ourselves.
-        <br>
-        We are passionate about books, and we aim to share that passion with you by offering a diverse selection of high-quality books at affordable prices. Whether you're a seasoned reader or just starting on your reading journey, we've got something for everyone.
-        <br>
-        <br>
-        Our website is designed to make it easy for you to find the books you're looking for, with intuitive navigation, helpful recommendations, and detailed descriptions of each book. Plus, our secure checkout process ensures that your online shopping experience is safe and hassle-free.
-        <br>
-        <br>
-        Thank you for choosing our bookstore for your reading needs. We hope you enjoy browsing our collection and find your next favorite book here!  </p>
-</header>
 
 <body>
             <style>
