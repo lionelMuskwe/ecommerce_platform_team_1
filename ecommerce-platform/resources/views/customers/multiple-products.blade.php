@@ -41,7 +41,7 @@ h1 {
             /* width: 50%; */
             }
 
-            
+
             .product-image {
                 opacity: 1;
                 display: block;
@@ -73,7 +73,7 @@ h1 {
             font-size: 16px;
             padding: 16px 32px;
             }
-                       
+
             </style>
 </body>
 
@@ -81,22 +81,21 @@ h1 {
 @foreach ($products as $product)
     <!--<a href="{{ route('product.detail', ['id' => $product['id']]) }}">{{$product['title']}}</a>-->
 
-   
+
         <div class="product-container">
-    
+
 
 
         <div class="col-lg-4">
                     <div class="product-information">
-                    <img src="{{ asset('images') }}/{{ $product->image }}" alt="Image" class= "product-image" height="250" width="150">
-                    <a href="{{ route('product.detail', ['id' => $product['id']]) }}">{{$product['image']}}</a>
+                    <a href="{{ route('product.detail', ['id' => $product['id']]) }}"><img src="{{ asset('images') }}/{{ $product->image }}" alt="Image" class= "product-image" height="250" width="150"></a>
                     {{-- Content goes in this section --}}
                     </div>
                     {{-- <div class="container"
                         <div class="middle">
                             <div class="text">TEXT</div>
                         </div> --}}
-        
+
 
             <div class="product-title">
                 <a href="{{ route('product.detail', ['id' => $product['id']]) }}">{{$product['title']}}</a>
@@ -105,7 +104,7 @@ h1 {
             <div class="product-price">
                     £{{$product['price']}}
             </div>
-    
+
 
         <div>
             <form action="{{ url('add-to-cart', $product->id) }}" method="POST">
