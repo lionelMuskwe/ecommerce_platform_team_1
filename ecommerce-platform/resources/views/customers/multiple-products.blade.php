@@ -44,6 +44,11 @@ h1 {
             </style>
 </body>
 
+        <a href = "{{route('multiple-products')}}"><button>All</button></a>
+@foreach($categories as $genre)
+        <a href = "{{route('product.filter', ['id' => $genre['id']])}}"><button>{{$genre['name']}}</button></a>
+@endforeach
+
 @foreach ($products as $product)
     <!--<a href="{{ route('product.detail', ['id' => $product['id']]) }}">{{$product['title']}}</a>-->
 
