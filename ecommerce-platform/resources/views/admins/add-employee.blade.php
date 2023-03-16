@@ -52,10 +52,12 @@
             </select><br><br><br>
 
 
-            <button type="submit">Add Employee</button>
+            <button type="submit" id="submit-button" >Add Employee</button>
 
 
         </form>
     </div>
+
+    <script defer src="{{asset('js/add-employee.js')}}"></script>
 @endsection()
 
