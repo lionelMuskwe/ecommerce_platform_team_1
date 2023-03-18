@@ -27,20 +27,15 @@
   transition: 0.3ms;
   cursor: pointer;
   font-size: 16px;
-  margin: 5px 5px;
-  transition: 0.35s;
+  margin: 4px 2px;
+  transition: 0.3s;
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
 }
 
-
-
-
-
-
 .filter button:active{
-  shad
+  
 }
 
 /*LAYOUT*/
@@ -75,7 +70,6 @@ margin-right: auto;
 width: 50%;
 margin: 20px;
 background-color: blueviolet;
-padding: 20px;
 }
 
 /*title and description*/
