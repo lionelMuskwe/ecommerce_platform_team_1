@@ -1,12 +1,11 @@
 @extends("../general/master")
 
 @section("title")
-    Product Details
+    Products
 @endsection()
 
 @section("links")
-    <link rel="stylesheet" href="{{asset('css/detailed-product.css')}}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{{asset('css/products.css')}}">
 @endsection
 
 @section("content")

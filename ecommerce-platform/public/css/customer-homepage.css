@@ -1,64 +1,18 @@
-/* New designs by Lionel */
-
 body {
   background-color: white;
-  }
-
-
-.product-description {
-  font-size: 30px;
 }
 
-.products-container {
-  margin-top: 40px;
+.marquee-section {
+  position: relative;
 }
 
-.row-of-books {
-  margin-bottom: 40px;
-}
-
-.product-container {
-  padding: 10px;
-}
-
-.product-container:hover {
-  outline: solid rgb(51, 48, 48) 4px;
-
-}
-
-.product-title {
-  font-size: 35px;
-  font-family:'Times New Roman', Times, serif;
-  text-align: center;
-}
-
-
-.product-price {
-
-}
-
-
-.product-description {
-
-}
-
-.product-image {
-  width: 100%;
-  height: 100%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-
-/* Scrolling text animation */
 .marquee {
   margin: 0 auto;
   white-space: nowrap;
   overflow: hidden;
   position: absolute;
+  z-index: 1;
+  width: 100%;
 }
 
 .marquee span {
@@ -78,4 +32,195 @@ a {
   100% {
     transform: translate(-100%, 0);
   }
+}
+
+.cover-image-section {
+  margin-bottom: 50px;
+}
+
+.cover-image-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(70%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.best-sellers-section {
+  margin-bottom: 50px;
+}
+
+.best-sellers-heading {
+  font-size: 32px;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  margin-bottom: 20px;
+  color: purple;
+  text-decoration: underline;
+  text-decoration-color: yellow;
+}
+
+.carousel {
+  margin-bottom: 150px;
+}
+
+.products-container {
+  margin-top: 40px;
+}
+
+.product-card {
+  position: relative;
+  padding: 20px;
+  margin-bottom: 40px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 400px;
+  z-index: 10;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 12px rgba(153, 4, 227, 0.999);
+  transform: translateY(-5px);
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.product-info {
+  text-align: left;
+  padding-top: 20px;
+}
+
+.product-title {
+  font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 5px;
+}
+
+.product-author {
+  font-size: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 10px;
+  color: purple;
+}
+
+.carousel-indicators li {
+  background-color: #ccc;
+  border-radius: 50%;
+  width: 15px;
+  height: 10px;
+}
+
+.carousel-indicators .active {
+  background-color: #777;
+}
+
+.product-overlay {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 24px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.overlay-hash {
+  color: yellow;
+  background-color: purple;
+}
+
+.overlay-number {
+  color: yellow;
+  background-color: purple;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.video-promotion-section {
+  margin-top: 50px;
+}
+
+.portrait-card {
+  position: relative;
+  background-color: #f2f2f2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 350px;
+}
+
+.portrait-card:hover {
+  box-shadow: 0 8px 12px rgba(153, 4, 227, 0.999);
+  transform: translateY(-5px);
+}
+
+.promotion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 40px;
+  border: 4px dashed purple;
+  padding: 10px;
+  box-decoration-break: clone;
+  width: 100%;
+}
+
+.promotion-two,
+.promotion-one {
+  background-color: white;
+  color: purple;
+  font-size: 32px;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px solid purple;
+  border-radius: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.promotion-two {
+  background-color: purple;
+  color: white;
+  border-color: white;
+}
+
+.promotion-one {
+  background-color: yellow;
+  color: purple;
+  border-color: purple;
+}
+
+.promotion-container span {
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.promotion-container p {
+  text-align: center;
+  font-size: 16px;
 }

@@ -1,5 +1,38 @@
-.logo {
+
+  .logo {
     width: 150px;
+  }
+  
+  .navbar-nav .nav-link {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  
+  .fas {
+    font-size: 24px;
+  }
+
+  .form-control {
+    width: 1200px;
+  }
+
+  .form-inline {
+    padding-right: calc((100vw - 1200px) / 2);
+    padding-left: calc((100vw - 1200px) / 2);
+  }
+
+  .form-control::placeholder {
+    color: purple;
+    width: fit-content;
+  }
+  
+  .navbar-nav.ml-auto {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin-right: 10px;
   }
   
   .navbar-nav .nav-link:hover {
@@ -37,19 +70,6 @@
     box-shadow: none !important;
   }
   
-  .form-control {
-    width: 450px;
-  }
-  
-  .form-inline {
-    padding-right: 50px;
-  }
-  
-  .form-control::placeholder {
-    color: purple;
-    width: fit-content;
-  }
-  
   .input-group-append button {
     background-color: purple;
     color: white;
@@ -59,4 +79,4 @@
   .input-group-append button:hover {
     background-color: #6F42C1;
   }
-  
+
