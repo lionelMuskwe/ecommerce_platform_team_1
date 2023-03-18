@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <style>
-    .logo {
-      width: 150px;
-    }
-  </style>
   <link rel="stylesheet" href="{{asset('css/navbar.css')}}">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" rel="stylesheet">
@@ -46,7 +42,7 @@
 
 
 
-        <ul class="navbar-nav">
+        <ul class="navbar-nav ml-auto">
         <li class="nav-item">
   <a class="nav-link" href="{{ url('/user-basket') }}">
     <i class="fas fa-shopping-basket"></i>
