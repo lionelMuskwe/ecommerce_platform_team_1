@@ -41,7 +41,7 @@ Home
     @endforeach
   </ol>
 
-  <div class="carousel-inner">
+  <div class="carousel-inner" style="height: 800px">
     @foreach ($products->chunk(3) as $index => $product_chunk)
       <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
         <div class="d-flex row col-sm-12 products-container">

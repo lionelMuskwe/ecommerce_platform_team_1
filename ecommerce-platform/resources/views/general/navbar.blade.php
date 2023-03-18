@@ -32,7 +32,7 @@
         </ul>
 
         <form class="form-inline my-2 my-lg-0" action="{{ url('/search') }}" method="GET">
-  <div class="input-group">
+  <div class="input-group" style="width: 375px;">
     <input class="form-control mr-sm-2" type="search" name="query" placeholder="Search Book title, author, and ISBNs" aria-label="Search">
     <div class="input-group-append">
       <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
