@@ -1,15 +1,15 @@
 alert("Hello");
-var username = document.getElementById("username");
-var password = document.getElementById("password");
 var submitBtn = document.getElementById("submit-button");
 
 submitBtn.onclick = function(){
  
-    if (username.value < 6){
+    var username = document.getElementById("username").value;
+    if (username < 6){
         alert("Username too short");
     }
 
-    if (password.value < 8){
+    var password = document.getElementById("password").value;
+    if (password < 8){
         alert("Password too short");
     }
 
@@ -19,6 +19,23 @@ submitBtn.onclick = function(){
         alert("The age must be a number between 1 and 100");
         return false;
     }
+
+    var telephone = document.getElementById("telephone").value;
+    if (isNaN(telephone) || (telephone.length() != 11)) {
+        console.log(telephone);
+        alert("Phone number must be a number");
+        return false;
+    }
+
+    // var email = document.getElementById("email").value;
+    // public static boolean patternMatches(String email, String regexPattern) {
+    //     return Pattern.compile(regexPattern)
+    //       .matcher(emailAddress)
+    //       .matches();
+    // }
+
+    
+
 
     // return false;
 
