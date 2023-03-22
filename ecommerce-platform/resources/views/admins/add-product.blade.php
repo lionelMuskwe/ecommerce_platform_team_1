@@ -48,10 +48,12 @@
             <label for="category-id">Category Id:</label>
             <input type="text" name="category-id"><br><br><br>
 
-            <button type="submit">Add Product</button><br><br>
+            <button type="submit" id="submit-button">Add Product</button><br><br>
 
 
         </form>
     </div>
+
+    <script defer src="{{asset('js/add-product.js')}}"></script>
 @endsection()
 
