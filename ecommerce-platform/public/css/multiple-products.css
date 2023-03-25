@@ -1,0 +1,164 @@
+/* filter bar */
+.filter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 10px;
+  }
+
+.filter button {
+  background-color: lightgray;
+  color: black;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  height: 40px;
+  width: 100px;
+  padding-top: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.filter button:hover{
+  background-color: blueviolet;
+  transition: 0.3ms;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.filter button:active{
+  
+}
+
+/*LAYOUT*/
+.product-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px; 
+    text-align: center;
+    padding-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* .product-information{
+} */
+
+.product-image{
+max-width: 1500px;
+height: 250px;
+width: 160;
+margin-bottom: 10px;
+margin-top: 20px;
+box-shadow: 0px 0px 5px 1px blueviolet;
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+.product-details{
+width: 50%;
+margin: 20px;
+background-color: blueviolet;
+}
+
+/*title and description*/
+.product-title{
+font-size:  24px;
+font-weight: bold;
+margin-bottom: 10px;
+color: blueviolet;
+width: 330px;
+
+}
+
+
+.product-descripion{
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    }
+
+/*price*/
+.product-price {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 10px;
+text-align: center;
+}
+
+
+.quantity{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60px;
+  height:35px;
+}
+
+
+/*Add to cart button*/
+.submit{
+    background-color: white; /* Green */
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
+    font-weight: bold;
+    /* margin: 0px,65px; */
+    position: sticky;
+    width: 200px;
+    height: 35px;
+    transition: transform .5s;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+    
+}
+
+
+.submit:hover{
+    background-color:gold ;
+    }
+ 
+  .submit span:after {
+    font-family:'Bootstrap-icons';
+    content: '\F245';
+    position: absolute;
+    opacity: 0;
+    right: -20px;
+    transition: 0.3s;
+  }
+  
+  .submit:hover span {
+    padding-right: 25px;
+  }
+  
+  .submit:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+
+
+
+
+
+
+
+
+    
