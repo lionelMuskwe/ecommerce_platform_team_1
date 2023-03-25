@@ -6,6 +6,7 @@ SIGN UP
 
 @section("links")
 <link rel="stylesheet" href="{{asset('css/signup.css')}}">
+<script src="{{asset('js/signup.js')}}"></script>
 @endsection
 
 @section("content")
@@ -34,7 +35,7 @@ SIGN UP
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-                        <input type="text" name="password" class="form-control" placeholder="Password" />
+                        <input type="text" name="password" class="form-control" id="password" placeholder="Password" />
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-lock"></i></span>
@@ -49,7 +50,7 @@ SIGN UP
                         <input type="text" name="telephone"class="form-control" placeholder="Telephone" />
                     </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-success" style="background:purple;">Signup Now</button>
+                        <button type="submit" id="submitBtn" class="btn btn-success" style="background:purple;">Signup Now</button>
                 </form>
                         <p class="text-center text-muted mt-2">
                             When You Register by Clicking Signup Button, You Agree to our <a href="#">Terms and
