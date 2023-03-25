@@ -23,31 +23,31 @@ SIGN UP
                 @csrf
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-user"></i></span>
-                        <input type="text" name="username" class="form-control" placeholder="Username" />
+                        <input type="text" name="username" class="form-control" placeholder="Username" id="username" required/>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-user"></i></span>
-                        <input type="text" name="firstname" class="form-control" placeholder="First Name" />
+                        <input type="text" name="firstname" class="form-control" placeholder="First Name" id="fname" required/>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-user"></i></span>
-                        <input type="text" name="lastname" class="form-control" placeholder="Last Name" />
+                        <input type="text" name="lastname" class="form-control" placeholder="Last Name" id="surname" required/>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-envelope"></i></span>
-                        <input type="text" name="password" class="form-control" id="password" placeholder="Password" />
+                        <input type="text" name="password" class="form-control" id="password" placeholder="Password" required/>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-lock"></i></span>
-                        <input type="text" name="age" class="form-control" placeholder="Age" />
+                        <input type="text" name="age" class="form-control" placeholder="Age" id="age" required/>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-lock"></i></span>
-                        <input type="text" name="address"class="form-control" placeholder="Address" />
+                        <input type="text" name="address"class="form-control" placeholder="Address" id="address" required/>
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-user"></i></span>
-                        <input type="text" name="telephone"class="form-control" placeholder="Telephone" />
+                        <input type="text" name="telephone"class="form-control" placeholder="Telephone" id="phone" required />
                     </div>
                     <div class="d-grid">
                         <button type="submit" id="submitBtn" class="btn btn-success" style="background:purple;">Signup Now</button>
