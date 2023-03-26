@@ -33,7 +33,9 @@ class CartController extends Controller
                 $cartItem->save();
             }
 
-            return redirect()->back()->with('status', 'Product added to Cart!');
+            return redirect()->back()
+                ->with('message', 'Product added to Cart!')
+                ->with('alert-class', 'alert-success');
         } else {
             echo ("user not authenticated");
             return redirect('login');
