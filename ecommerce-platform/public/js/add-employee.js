@@ -1,4 +1,3 @@
-alert("Hello");
 var submitBtn = document.getElementById("submit-button");
 
 submitBtn.onclick = function(){
