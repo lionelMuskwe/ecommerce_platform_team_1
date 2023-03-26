@@ -18,8 +18,6 @@ return new class extends Migration
             $table->foreignId('order_details_id');
             $table->foreignId('product_id');
             $table->Integer('quantity');
-            $table->String('status');
-            $table->integer('confirmation_id');
         });
     }
 
