@@ -14,7 +14,8 @@ class OrderDetail extends Model
         "user_id",
         "order_items_id",
         "total",
+        "status",
+        "confirmation_id",
         "payment_id"
-
     ];
 }
