@@ -15,7 +15,7 @@
         <button class="dropbtn">Employees</button>
         <div class="dropdown-content">
             <a href="{{ url('/admin-add-employee') }}">Add Employee</a>
-            <a href="#">Employee List</a>
+            <a href="{{url('employeePage')}}">Employee List</a>
 
         </div>
     </div>
