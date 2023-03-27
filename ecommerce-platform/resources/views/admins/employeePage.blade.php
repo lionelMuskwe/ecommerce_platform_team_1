@@ -10,7 +10,7 @@
 
 @section("content")
     {{-- Content goes in this section --}}
-<h1>User List</h1>
+<h1>Employee List</h1>
 
 <table border="1">
     <tr>
