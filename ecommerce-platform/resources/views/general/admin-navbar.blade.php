@@ -8,7 +8,7 @@
         <button class="dropbtn">Products</button>
         <div class="dropdown-content">
             <a href="{{url('admin-add-product')}}">Add Product</a>
-            <a href="#">Product List</a>
+            <a href="{{url('admin-productPage')}}">Product List</a>
         </div>
     </div>
     <div class="dropdown">
