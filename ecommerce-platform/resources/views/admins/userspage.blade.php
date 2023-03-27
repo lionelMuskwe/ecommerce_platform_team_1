@@ -1,7 +1,7 @@
 @extends("../general/admin-master")
 
 @section("title")
-    Admin Home
+    User List
 @endsection()
 
 @section("links")
