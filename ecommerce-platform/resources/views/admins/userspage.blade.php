@@ -1,4 +1,4 @@
-@extends("../general/master")
+@extends("../general/admin-master")
 
 @section("title")
     Admin Home
