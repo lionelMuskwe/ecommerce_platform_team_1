@@ -1,3 +1,14 @@
+@extends("../general/admin-master")
+
+@section("title")
+    Product List
+@endsection()
+
+@section("links")
+<link rel="stylesheet" href="{{asset('css/admin-homepage.css')}}">
+@endsection
+
+@section("content")
 <h1>Product List</h1>
 
 <table border="1">
@@ -28,3 +39,5 @@
     </tr>
     @endforeach
 </table>
+
+@endsection()
