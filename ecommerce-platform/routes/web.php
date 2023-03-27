@@ -110,6 +110,8 @@ Route::post("/signupRequest", [UserController::class, "signupRequest"])->name("s
 //Route for showing the list of users
 Route::get('userspage', [UserController::class, 'show'])->name("userspage");
 
+Route::get('employeePage', [UserController::class, 'showEmployees'])->name('employeePage');
+
 Route::get('admin-productPage', [ProductController::class, 'showProducts'])->name('admin-productPage');
 
 //Route for showing list of products
