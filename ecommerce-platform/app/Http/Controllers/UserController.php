@@ -86,4 +86,12 @@ class UserController extends Controller
         $data = User::all();
         return view('admins/userspage', ['users' => $data]);
     }
+
+    public function showEmployees()
+    {
+        $data = User::where('role', 1)->get();
+        return view('admins/employeePage', ['employees' => $data]);
+    }
+
+
 }
