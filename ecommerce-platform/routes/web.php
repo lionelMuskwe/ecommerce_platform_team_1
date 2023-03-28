@@ -8,6 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\OrderItemController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\OrderDetailsController;
 use App\Models\User;
 /*
 |--------------------------------------------------------------------------
@@ -110,10 +111,18 @@ Route::post("/signupRequest", [UserController::class, "signupRequest"])->name("s
 //Route for showing the list of users
 Route::get('userspage', [UserController::class, 'show'])->name("userspage");
 
+Route::get('/OrderList', [OrderDetailsController::class, 'showOrderDetails'])->name("orderList");
+
+Route::get('employeePage', [UserController::class, 'showEmployees'])->name('employeePage');
+
+Route::get('admin-productPage', [ProductController::class, 'showProducts'])->name('admin-productPage');
+
 //Route for showing list of products
 Route::get('products-page', [ProductController::class, 'showProducts'])->name("showProducts");
 
 Route::get('details/{id}', [ProductController::class, 'detail'])->name('product.detail');
+
+Route::get('OrderList/{id}', [OrderDetailsController::class, 'detail'])->name('order-detail');
 
 Route::get('delivery-details', [AddressController::class, 'index'])->name('delivery-details');
 

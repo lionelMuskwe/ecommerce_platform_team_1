@@ -26,7 +26,7 @@ Login
                     </div>
                     <div class="input-group mb-3">
                         <span class="input-group-text"><i class="fa fa-lock"></i></span>
-                        <input type="text" name="password" class="form-control" placeholder="Password" />
+                        <input type="password" name="password" class="form-control" placeholder="Password" />
                     </div>
 
                     <div class="d-grid">

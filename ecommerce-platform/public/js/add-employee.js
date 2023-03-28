@@ -1,8 +1,7 @@
-alert("Hello");
 var submitBtn = document.getElementById("submit-button");
 
 submitBtn.onclick = function(){
- 
+
     var username = document.getElementById("username").value;
     if (username < 6){
         alert("Username too short");
@@ -34,7 +33,7 @@ submitBtn.onclick = function(){
     //       .matches();
     // }
 
-    
+
 
 
     // return false;

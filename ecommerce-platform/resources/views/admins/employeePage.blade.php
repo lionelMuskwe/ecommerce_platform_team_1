@@ -1,7 +1,7 @@
 @extends("../general/admin-master")
 
 @section("title")
-    User List
+    Employees List
 @endsection()
 
 @section("links")
@@ -10,7 +10,7 @@
 
 @section("content")
     {{-- Content goes in this section --}}
-<h1>User List</h1>
+<h1>Employee List</h1>
 
 <table border="1">
     <tr>
@@ -23,7 +23,7 @@
         <td>Telephone</td>
         <td>Role</td>
     </tr>
-    @foreach($users as $user)
+    @foreach($employees as $user)
     <tr>
         <td>{{$user['id']}}</td>
         <td>{{$user['username']}}</td>

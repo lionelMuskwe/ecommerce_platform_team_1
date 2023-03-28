@@ -80,7 +80,7 @@ class HomeController extends Controller
         $product->date_published = $request->input('date-published');
         $product->publisher = $request->input('publisher');
         $product->inventory_id = $request->input('inventory-id');
-        $product->category_id = $request->input('category-id');
+        $product->category_id = $request->input('category');
 
         $product->save();
 
@@ -93,9 +93,8 @@ class HomeController extends Controller
         return view("employees/homepage");
     }
 
-    public function adminComplaintsPage(Request $request){
+    public function adminComplaintsPage(Request $request)
+    {
         return view("admins/complaints");
     }
-
-   
 }

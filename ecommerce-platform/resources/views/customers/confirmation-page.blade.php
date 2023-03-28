@@ -12,6 +12,7 @@
     <div class="container" style="padding-top: 50px; padding-bottom: 50px">
         <h1>Order Confirmation:</h1>
         <hr><br><br>
-        <p>Thank you for your order. Your order number is: ########</p>
+        <p>Thank you for your order. Your order number is: {{$order->confirmation_id}}</p>
+        <p>Total cost: £{{$order->total}}</p>
     </div>
 @endsection
