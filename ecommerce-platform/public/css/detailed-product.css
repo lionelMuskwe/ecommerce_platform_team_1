@@ -68,11 +68,13 @@ margin-top: 100px;
 
 .card-title{
     text-align: center;
+    position: absolute;
     bottom: 0;
     width: 100%;
     height: 18%;
     text-transform: uppercase;
     transition: 0.3s ease-in-out;
+    background: transparent;
 }
 
 .card-title h3{
@@ -86,8 +88,11 @@ margin-top: 100px;
 }
 
 
+.card:hover .card-title{
+    bottom: -80px;
+}
 .card:hover .card-details{
-    bottom:0;
+    bottom: 0px;
 }
 
 .quantity{
