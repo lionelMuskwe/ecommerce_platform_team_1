@@ -35,7 +35,7 @@ class UserController extends Controller
             'password' => 'required',
         ]);
 
-        User::create([
+       $user = User::create([
             'firstname' => $request->firstname,
             'lastname' => $request->lastname,
             'age' => $request->age,
@@ -45,7 +45,8 @@ class UserController extends Controller
             'password' => Hash::make($request->password),
             'role' => 0,
         ]);
-        Auth()->attempt($request->only('email', 'password'));
+
+        Auth::login($user);
         return redirect("/");
     }
 
