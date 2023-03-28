@@ -7,10 +7,25 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Cart;
 use App\Models\OrderItem;
 use App\Models\OrderDetail;
+use App\Models\Product;
 
 class OrderItemController extends Controller
 {
-    //
+    public function calculateTotal()
+    {
+        $user = auth()->user();
+        $id = Auth::user()->id;
+        $cart = cart::where('user_id', '=', $id)->get();
+        $total = 0;
+        foreach ($cart as $item) {
+            $product = Product::find($item->product_id);
+            $price = $product->price;
+            $total += $item->quantity * $price;
+        }
+        echo $total;
+        return $total;
+    }
+
     public function show(Request $request)
     {
 
@@ -24,7 +39,7 @@ class OrderItemController extends Controller
 
                 $order = new OrderDetail();
                 $order->user_id = $id;
-                $order->total = 0;
+                $order->total = $this->calculateTotal();
                 $order->status = "Pending";
                 $confirmationId = rand(10000000, 99999999);
                 $order->confirmation_id = $confirmationId;
@@ -37,6 +52,8 @@ class OrderItemController extends Controller
                     $orderItem->quantity = $cart[$i]->quantity;
                     $orderItem->save();
                 }
+
+                // $total = $this->calculateTotal();
 
                 cart::where('user_id', '=', $id)->delete();
 

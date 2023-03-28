@@ -27,4 +27,5 @@
             <a href="{{ url('/userspage') }}">User List</a>
         </div>
     </div>
+    <a href="{{url ('home') }}">Return to site</a>
 </nav>

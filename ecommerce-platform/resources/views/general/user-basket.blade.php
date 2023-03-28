@@ -54,14 +54,14 @@
                         <td>Subtotal</td>
                         <td>£{{number_format($subtotal, 2)}}</td>
                     </tr>
-                    <tr>
+                    {{-- <tr>
                         <td>Tax</td>
                         <td>£{{number_format($tax, 2)}}</td>
                     </tr>
                     <tr>
                         <td>Total</td>
-                        <td>£{{number_format($total, 2)}} </td>
-                    </tr>
+                        {{-- <td>£{{number_format($total, 2)}} </td> --}}
+                    {{-- </tr> --}}
                 </table>
             </div>
             <div>

@@ -9,8 +9,23 @@ use App\Models\Cart;
 
 class CartController extends Controller
 {
+
+    public function calculateTotal()
+    {
+        $user = auth()->user();
+        $id = Auth::user()->id;
+        $cart = cart::where('user_id', '=', $id)->get();
+        $total = 0;
+        foreach ($cart as $item) {
+            $total += $item->quantity * $item->price;
+        }
+        return $total;
+    }
+
+
     function addToCart(Request $request, $id)
     {
+
         $user = Auth::user();
         if ($user) {
             $cartItems = Cart::where('user_id', $user->id)
@@ -33,6 +48,8 @@ class CartController extends Controller
                 $cartItem->save();
             }
 
+            $total = $this->calculateTotal();
+
             return redirect()->back()
                 ->with('message', 'Product added to Cart!')
                 ->with('alert-class', 'alert-success');
@@ -42,7 +59,9 @@ class CartController extends Controller
         }
     }
 
-    function showCart()
+
+
+    public function showCart()
     {
         if (Auth::id()) {
             $user = auth()->user();
