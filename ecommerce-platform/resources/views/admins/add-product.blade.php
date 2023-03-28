@@ -43,10 +43,18 @@
             <input type="text" name="publisher"><br><br>
 
             <label for="inventory-id">Inventory Id:</label>
-            <input type="text" name="inventory-id"><br><br>
+            <input type="inventory-id" name="inventory-id">
 
             <label for="category-id">Category Id:</label>
-            <input type="text" name="category-id"><br><br><br>
+            <select class="form-select" style="height: 30px; width:200px" name="category" id="category">
+                <option value="1">Ficton</option>
+                <option value="2">Motivation</option>
+                <option value="3">Thriller</option>
+                <option value="4">Dystopian</option>
+                <option value="5">Romance</option>
+                <option value="6">Fantasy</option>
+                <option value="7">Crime</option>
+            </select><br><br>
 
             <button type="submit" id="submit-button">Add Product</button><br><br>
 
