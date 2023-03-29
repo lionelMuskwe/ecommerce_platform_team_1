@@ -75,7 +75,21 @@ class CartController extends Controller
 
     function removeFromCart($id)
     {
-        cart::where('product_id', '=', $id)->delete();
+        //find the cart with the same user and the same product
+        $cart = cart::where('user_id', '=', Auth::user()->id)
+            ->where('product_id', '=', $id)
+            ->first();
+        
+
+        if($cart->quantity >1){
+            // decrease the quantity of the product
+            $cart->quantity = $cart->quantity - 1;
+            $cart->save();
+        } else {
+            // delete the product from the cart
+            $cart->delete();
+        }
+        // cart::where('product_id', '=', $id)->delete();
 
         return redirect()->back();
     }
