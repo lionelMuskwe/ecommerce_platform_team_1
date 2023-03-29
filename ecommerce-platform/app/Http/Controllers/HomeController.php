@@ -33,6 +33,7 @@ class HomeController extends Controller
             abort(403);
         }
         return view("admins/homepage", compact('user'));
+        // return view("admins/homepage");
     }
 
     public function adminAddEmployeePage(Request $request)

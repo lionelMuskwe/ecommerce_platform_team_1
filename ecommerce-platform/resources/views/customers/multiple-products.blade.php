@@ -30,7 +30,6 @@ h1 {
 
 <body>
             <style>
-
             body{
             background-color:whitesmoke;
             }
@@ -46,12 +45,10 @@ h1 {
             </style>
 
             <style>
-
             .product-container {
             position: relative;
             /* width: 50%; */
             }
-
 
             .product-image {
                 opacity: 1;
@@ -59,7 +56,6 @@ h1 {
                 transition: .5s ease;
                 backface-visibility: hidden;
             }
-
             .middle {
             transition: .5s ease;
             opacity: 0;
@@ -69,15 +65,12 @@ h1 {
             transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%)
             }
-
             .product-container:hover .product-image{
                 opacity: 0.3;
             }
-
             .product-container:hover .image {
             opacity: 0.3;
             }
-
             .text {
             background-color: #4CAF50;
             color: white;
@@ -93,13 +86,6 @@ h1 {
     <!--<a href="{{ route('product.detail', ['id' => $product['id']]) }}">{{$product['title']}}</a>-->
 
 
-        <div class="product-container">
-
-
-
-        <div class="col-lg-4">
-
-   
 
     <div class="product-container">
 
@@ -109,12 +95,6 @@ h1 {
 
                     {{-- Content goes in this section --}}
                     </div>
-                    {{-- <div class="container"
-                        <div class="middle">
-                            <div class="text">TEXT</div>
-                        </div> --}}
-
-
             <div class="product-title">
                 <a href="{{ route('product.detail', ['id' => $product['id']]) }}">{{$product['title']}}</a>
             </div>
