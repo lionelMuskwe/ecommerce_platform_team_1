@@ -55,9 +55,11 @@
                     <p>{{$products['description']}}</p>
                     <p>Price: £{{$products['price']}}</p>
                     <p>Author: {{$products['author']}}</p>
-                    <div class="submit"
-                    <form>
-                        <p><button class ="submit"><span>Add to Cart</span></button></p>
+                    <div class="submit">
+                    <form action="{{ url('add-to-cart', $products->id) }}" method="POST">
+                        @csrf
+                        <input type="number" value="1" min="1" class="form-control" name="quantity">
+                        <button class ="submit"><span>Add to Cart</span></button>
                     </form>
             </div>
         </div>
