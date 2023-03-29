@@ -12,7 +12,7 @@
     {{-- Content goes in this section --}}
 <h1>Employee List</h1>
 
-<table border="1">
+<table class="table table-dark" border="1">
     <tr>
         <td>Id</td>
         <td>Username</td>
@@ -32,7 +32,7 @@
         <td>{{$user['age']}}</td>
         <td>{{$user['address']}}</td>
         <td>{{$user['telephone']}}</td>
-        <td>{{$user['role']}}</td>
+        <td>Employee</td>
     </tr>
     @endforeach
 </table>

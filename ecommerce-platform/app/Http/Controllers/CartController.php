@@ -89,7 +89,6 @@ class CartController extends Controller
             // delete the product from the cart
             $cart->delete();
         }
-        // cart::where('product_id', '=', $id)->delete();
 
         return redirect()->back();
     }

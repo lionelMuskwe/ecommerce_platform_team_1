@@ -47,6 +47,13 @@
   <a class="nav-link" href="{{ url('/user-basket') }}">
     <i class="fas fa-shopping-basket"></i>
   </a>
+
+  @if (auth()->check() != null && auth()->user()->role == 2)
+    <li class="nav-item">
+      <a class="nav-link" href="{{ url('admin-home') }}">
+        <i class="fas fa-user-shield"></i>
+      </a>
+  @endif
 </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

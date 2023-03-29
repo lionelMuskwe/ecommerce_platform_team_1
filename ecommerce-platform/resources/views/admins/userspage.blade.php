@@ -32,7 +32,15 @@
         <td>{{$user['age']}}</td>
         <td>{{$user['address']}}</td>
         <td>{{$user['telephone']}}</td>
-        <td>{{$user['role']}}</td>
+        
+        @if ($user['role'] == 1)
+            <td>Employee</td>
+        @elseif ($user['role'] == 2)
+            <td>Administrator</td>
+        @else
+            <td>Customer</td>
+        @endif
+
     </tr>
     @endforeach
 </table>
