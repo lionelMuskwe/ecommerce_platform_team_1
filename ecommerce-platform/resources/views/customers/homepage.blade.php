@@ -5,7 +5,6 @@ Home
 @endsection()
 
 @section("links")
-
   <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
   <link rel="stylesheet" href="{{asset('css/customer-homepage.css')}}">
   <script defer src="{{asset('js/homepage.js')}}"></script>
@@ -13,7 +12,6 @@ Home
 @section("content")
 
   <!-- Marquee section -->
-
   <div class="marquee-section">
     <div class="col-sm-12">
       <p class="marquee">
@@ -23,7 +21,6 @@ Home
   </div>
 
   <!-- Cover image section -->
-
   <div class="cover-image-section">
     <div class="cover-image-container">
       <img src="{{ asset('images/cover.jpg') }}" alt="Readers Republic Cover Image" class="cover-image">
@@ -31,7 +28,6 @@ Home
   </div>
 
   <!-- Best Sellers section -->
-
   <section class="best-sellers-section">
     <h2 class="best-sellers-heading">Best Sellers</h2>
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -64,31 +60,75 @@ Home
       </div>
     @endforeach
   </div>
-
   </section>
 
- <!-- Video and promotion section -->
- 
-<div class="row video-promotion-section">
-  <div class="col-md-4">
-    <div class="portrait-card">
-      <video width="100%" height="100%" controls>
-        <source src="{{ asset('videos/my-video.mp4') }}" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>
-  <div class="col-md-8">
-    <div class="promotion-container">
-      <div class="promotion-two">
-        <span>Buy TWO BOOKS</span>
-        <p>Add books to basket and discount will be applied automatically.</p>
-      </div>
-      <div class="promotion-one">
-        <span>Get ONE BOOK for FREE</span>
-        <p>Add books to basket and discount will be applied automatically.</p>
+    <!-- Video and promotion section -->
+
+    
+      <div class="col-md-12 col-lg-12">
+        <div class="promotion-container">
+          <div class="promotion-two">
+            <span>Buy TWO BOOKS <br> Get ONE BOOK for FREE</span>
+          </div>
+          <div class="promotion-one">
+            <span></span>
+            <p>Add books to basket and discount will be applied automatically.</p>
+          </div>
+        </div>
       </div>
     </div>
+  </section>
+
+ <!-- Testimonial section -->
+<section class="testimonial-section">
+  <h2 class="testimonial-heading">Testimonials</h2>
+  <div class="testimonial-container">
+    <div class="testimonial-card">
+     
+      <div class="testimonial-info">
+        <h3 class="testimonial-name">John Doe</h3>
+        <p class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+        </p>
+        <p class="testimonial-text">"I would highly recommend Readers Republic to anyone looking for quality books at affordable prices."</p>
+      </div>
+    </div>
+    <div class="testimonial-card">
+     
+      <div class="testimonial-info">
+        <h3 class="testimonial-name">Jane Doe</h3>
+        <p class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <i class="far fa-star"></i>
+        </p>
+        <p class="testimonial-text">"The books arrived quickly and were in excellent condition. I am very happy with my purchase."</p>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      
+      <div class="testimonial-info">
+        <h3 class="testimonial-name">Tom Smith</h3>
+        <p class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="far fa-star"></i>
+          <i class="far fa-star"></i>
+        </p>
+        <p class="testimonial-text">"The website was easy to navigate and the prices were very reasonable. I will definitely be shopping here again."</p>
+      </div>
+    </div>
+    <div class="final-card">
+    <a href="#" class="back-to-top">Back to top</a>
+    </div>
   </div>
-</div>
+</section>
+
 @endsection

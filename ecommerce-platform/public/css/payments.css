@@ -1,0 +1,78 @@
+body {
+    background-color: white;
+  }
+  
+  form {
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 100px 20px 20px 20px;
+  }
+  
+  form label {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    display: block;
+    margin-bottom: 10px;
+    color: purple;
+    text-align: left;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    border: 2px solid purple;
+  }
+  
+  form input:focus {
+    outline: none;
+    border-color: yellow;
+  }
+  
+  form button {
+    background-color: purple;
+    color: white;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  form button:hover {
+    background-color: yellow;
+    color: purple;
+  }
+  
+  form button:active {
+    transform: translateY(2px);
+  }
+  
+  #error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  
+  .payment-page nav {
+    display: none;
+  }
+
+  .section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .section-text {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #666;
+  }
+  
