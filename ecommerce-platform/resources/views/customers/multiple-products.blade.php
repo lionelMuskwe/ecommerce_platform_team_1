@@ -100,7 +100,7 @@ h1 {
             </div>
 
             <div class="product-price">
-                    £{{$product['price']}}
+                    £{{number_format($product['price'],2)}}
             </div>
 
 

@@ -55,7 +55,7 @@ Home
                 <div class="product-info">
                   <h3 class="product-title">{{ $product['title'] }}</h3>
                   <h4 class="product-author">{{ $product['author'] }}</h4>
-                  <p class="product-price">${{ $product['price'] }}</p>
+                  <p class="product-price">${{ number_format($product['price'],2) }}</p>
                 </div>
               </div>
             </a>
