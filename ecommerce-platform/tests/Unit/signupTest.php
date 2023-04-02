@@ -34,12 +34,12 @@ class UserControllerTest extends TestCase
         $this->assertUserPasswordIsHashed($userData['password']);
     }
 
-    private function postSignupRequest(array $userData) //post sign up request with data given from $userData
+    public function postSignupRequest(array $userData) //post sign up request with data given from $userData
     {
         return $this->post(route('signupRequest'), $userData);
     }
 
-    private function assertUserInDatabase(array $userData) //Check if the user exist in database from $userData
+    public function assertUserInDatabase(array $userData) //Check if the user exist in database from $userData
     {
         $this->assertDatabaseHas('users', [
             'username' => $userData['username'],
@@ -52,13 +52,13 @@ class UserControllerTest extends TestCase
         ]);
     }
 
-    private function assertUserHasRole(array $userData, int $role) //Checks if the signed up user has the expected role
+    public function assertUserHasRole(array $userData, int $role) //Checks if the signed up user has the expected role
     {
         $user = Auth::user();
         $this->assertEquals($role, $user->role);
     }
 
-    private function assertUserPasswordIsHashed(string $password) //checks if the signed up user's password is hashed
+    public function assertUserPasswordIsHashed(string $password) //checks if the signed up user's password is hashed
     {
         $user = Auth::user();
         $this->assertTrue(Hash::check($password, $user->password));
