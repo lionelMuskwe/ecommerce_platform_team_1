@@ -13,6 +13,6 @@
         <h1>Order Confirmation:</h1>
         <hr><br><br>
         <p>Thank you for your order. Your order number is: {{$order->confirmation_id}}</p>
-        <p>Total cost: £{{$order->total}}</p>
+        <p>Total cost: £{{number_format($order->total, 2)}}</p>
     </div>
 @endsection

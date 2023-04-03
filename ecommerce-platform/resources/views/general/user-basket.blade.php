@@ -29,14 +29,14 @@
                             <div class="cart-info">
                                 <div>
                                     <p>{{$product->title}}</p>
-                                    <small>Price: £{{$product->price}}</small><br>
+                                    <small>Price: £{{number_format($product->price,2)}}</small><br>
                                     <img src="{{ asset('images') }}/{{ $product->image }}" alt="" style="max-width:100%; height:auto">
                                     <a href="{{ route('remove-from-cart', ['id' => $product->id]) }}">Remove</a>
                                 </div>
                             </div>
                         </td>
                         <td>{{$cartItem->quantity}}</td>
-                        <td>£{{$product->price * $cartItem->quantity}}</td></td>
+                        <td>£{{number_format($product->price * $cartItem->quantity,2)}}</td></td>
                     </tr>
 
                 @endforeach
