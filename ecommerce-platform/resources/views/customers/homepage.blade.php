@@ -1,4 +1,4 @@
-@extends("../General/master")
+@extends("../general/master")
 
 @section("title")
 Home
@@ -64,7 +64,7 @@ Home
 
     <!-- Video and promotion section -->
 
-    
+
       <div class="col-md-12 col-lg-12">
         <div class="promotion-container">
           <div class="promotion-two">
@@ -84,7 +84,7 @@ Home
   <h2 class="testimonial-heading">Testimonials</h2>
   <div class="testimonial-container">
     <div class="testimonial-card">
-     
+
       <div class="testimonial-info">
         <h3 class="testimonial-name">John Doe</h3>
         <p class="testimonial-stars">
@@ -98,7 +98,7 @@ Home
       </div>
     </div>
     <div class="testimonial-card">
-     
+
       <div class="testimonial-info">
         <h3 class="testimonial-name">Jane Doe</h3>
         <p class="testimonial-stars">
@@ -112,7 +112,7 @@ Home
       </div>
     </div>
     <div class="testimonial-card">
-      
+
       <div class="testimonial-info">
         <h3 class="testimonial-name">Tom Smith</h3>
         <p class="testimonial-stars">
