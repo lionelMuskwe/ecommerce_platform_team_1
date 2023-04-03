@@ -82,6 +82,7 @@ class HomeController extends Controller
         $product->publisher = $request->input('publisher');
         $product->inventory_id = $request->input('inventory-id');
         $product->category_id = $request->input('category');
+        $product->quantity = 20;
 
         $product->save();
 
